@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astral & Watertech Water Tanks | Raj Sanitary Rewa</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f5f5;color:#111827;}
+
+/* HEADER */
+header{
+  background:#0b3c5d;
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#fff;
+}
+.logo-container{display:flex;align-items:center;gap:12px;}
+.logo-container img{height:52px;}
+.logo-container span{font-size:1.4rem;font-weight:700;letter-spacing:1px;}
+nav a{color:#e5e7eb;margin-left:22px;text-decoration:none;font-weight:500;font-size:.95rem;}
+nav a:hover{color:#ffcc00;}
+
+/* HERO */
+.hero{
+  background:
+    linear-gradient(135deg,rgba(0,0,0,.75),rgba(0,0,0,.58)),
+    url('watertank-hero.jpg') center/cover no-repeat;
+  color:#fff;
+  padding:80px 20px 88px;
+}
+.hero-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+.hero h1{font-size:2.5rem;margin-bottom:10px;letter-spacing:.03em;}
+.hero h1 span{color:#ffcc00;}
+.hero p{font-size:1rem;line-height:1.8;color:#e5e7eb;max-width:560px;}
+.hero-badges{margin:16px 0 22px;display:flex;flex-wrap:wrap;gap:10px;}
+.hero-badge{
+  font-size:.78rem;
+  padding:5px 10px;
+  border-radius:999px;
+  border:1px solid rgba(249,250,251,.5);
+}
+.hero-cta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:8px;
+}
+.btn-primary,.btn-ghost{
+  padding:11px 22px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.btn-primary{background:#ffcc00;color:#111827;}
+.btn-ghost{border:1px solid #e5e7eb;color:#f9fafb;}
+.hero-side{
+  background:rgba(15,23,42,.78);
+  border-radius:18px;
+  padding:20px 22px;
+  box-shadow:0 18px 50px rgba(15,23,42,.55);
+}
+.hero-side h3{font-size:1.15rem;margin-bottom:10px;}
+.hero-side ul{list-style:none;font-size:.9rem;color:#e5e7eb;line-height:1.7;}
+.hero-side li{margin-bottom:6px;}
+
+/* WRAPPER */
+main{max-width:1200px;margin:-30px auto 40px;background:#f9fafb;border-radius:24px;box-shadow:0 18px 60px rgba(15,23,42,.12);padding:30px 24px 34px;}
+
+/* SECTION TITLES */
+.section-title{font-size:1.5rem;color:#0b3c5d;margin-bottom:6px;}
+.section-sub{font-size:.92rem;color:#6b7280;margin-bottom:18px;}
+
+/* LAYOUT */
+.two-col{display:grid;grid-template-columns:1.05fr 1fr;gap:26px;margin-bottom:28px;}
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:18px 18px 20px;
+  box-shadow:0 10px 30px rgba(15,23,42,.06);
+}
+.card h3{font-size:1.15rem;margin-bottom:6px;color:#111827;}
+.card ul{font-size:.9rem;color:#4b5563;line-height:1.7;margin-left:16px;}
+.card ul li{margin-bottom:4px;}
+.badge-small{
+  display:inline-block;
+  padding:3px 9px;
+  border-radius:999px;
+  background:#e0f2fe;
+  color:#0b3c5d;
+  font-size:.78rem;
+  font-weight:600;
+}
+
+/* TAG GRID */
+.tag-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:8px;
+  margin-top:10px;
+}
+.tag{
+  font-size:.82rem;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px dashed #cbd5e1;
+  background:#f9fafb;
+}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;margin-top:10px;}
+.spec-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.86rem;
+}
+.spec-table th,.spec-table td{
+  padding:9px 10px;
+  border-bottom:1px solid #e5e7eb;
+  text-align:left;
+}
+.spec-table th{
+  background:#0b3c5d;
+  color:#f9fafb;
+  font-weight:600;
+}
+
+/* FOOTER CTA */
+.footer-cta{
+  background:#fffbeb;
+  border-radius:18px;
+  padding:18px 18px 20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-top:12px;
+}
+.footer-cta p{font-size:.9rem;color:#4b5563;max-width:520px;}
+.footer-cta a{
+  background:#0b3c5d;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:600;
+}
+
+/* PAGE FOOTER */
+.page-footer{
+  background:#111827;
+  color:#9ca3af;
+  text-align:center;
+  padding:18px 16px;
+  font-size:.8rem;
+  margin-top:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:24px;}
+  main{margin:-20px 12px 30px;padding:22px 14px 26px;}
+  .two-col{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-container">
+    <img src="logo.png" alt="Raj Sanitary">
+    <span>RAJ SANITARY</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1><span>Water Tanks</span> – Astral & Watertech</h1>
+      <p>
+        Multi-layer, UV-stabilised, food-grade plastic water storage tanks from Astral and Watertech, suitable for homes, apartments, commercial and agricultural use.[web:59][web:63]
+      </p>
+      <div class="hero-badges">
+        <span class="hero-badge">300 L – 10,000 L capacities[web:63]</span>
+        <span class="hero-badge">2 / 3 / 4 layer technology[web:59][web:63]</span>
+        <span class="hero-badge">Food-grade & UV-stabilised[web:65][web:68]</span>
+      </div>
+      <div class="hero-cta">
+        <a href="tel:7000903314" class="btn-primary">
+          <i class="fa-solid fa-phone"></i> Call for Tank Price
+        </a>
+        <a href="contact.html" class="btn-ghost">
+          Get Size Recommendation
+        </a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <h3>How to Choose Capacity</h3>
+      <ul>
+        <li>2–3 person family: 500 – 1000 L.</li>
+        <li>4–6 person family: 1500 – 3000 L.</li>
+        <li>Large house / building: 5000 L+ (multiple tanks).</li>
+        <li>Check water supply timing & backup days before finalising.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main>
+
+  <!-- ASTRAL RANGE -->
+  <section>
+    <h2 class="section-title">Astral Water Tank Range</h2>
+    <p class="section-sub">Official Astral water tanks with multi-layer design, anti-microbial inner layers and long-term UV protection.[web:59][web:63][web:65]</p>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>Cleo – 4 Layer Premium Tank</h3>
+        <span class="badge-small">Anti-viral Copper Shield[web:64][web:67]</span>
+        <ul>
+          <li>4-layer construction with advanced UV and temperature protection.[web:59][web:63]</li>
+          <li>Inner layer with copper-infused anti-viral / anti-microbial shield for water hygiene.[web:63][web:64][web:67]</li>
+          <li>Ideal for premium homes, villas and sensitive applications.</li>
+          <li>Common capacities: 500 L – 2000 L (varies by region).[web:64]</li>
+        </ul>
+        <div class="tag-grid">
+          <div class="tag">Astral Cleo 500 L</div>
+          <div class="tag">Astral Cleo 750 L</div>
+          <div class="tag">Astral Cleo 1000 L</div>
+          <div class="tag">Astral Cleo 1500 L</div>
+          <div class="tag">Astral Cleo 2000 L</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Vito – 3 Layer High Hygiene</h3>
+        <span class="badge-small">3-Layer Copper Shield[web:59][web:63]</span>
+        <ul>
+          <li>Three-layer tank: outer UV layer, middle heat-block layer, inner copper-infused antimicrobial layer.[web:63]</li>
+          <li>Controls microbial growth and keeps stored water cool and clean.[web:63]</li>
+          <li>Suitable for terrace overhead installation in hot climates.</li>
+        </ul>
+        <div class="tag-grid">
+          <div class="tag">Astral Vito 500 L</div>
+          <div class="tag">Astral Vito 750 L</div>
+          <div class="tag">Astral Vito 1000 L</div>
+          <div class="tag">Astral Vito 1500 L+</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>Sylo – 2 Layer Roto-Moulded</h3>
+        <span class="badge-small">Black 2-Layer Tank[web:59][web:65][web:68]</span>
+        <ul>
+          <li>2-layer design – black UV-resistant outer layer, white food-grade inner layer.[web:65][web:68]</li>
+          <li>Outer black layer blocks sunlight to prevent algae growth.[web:65][web:68]</li>
+          <li>Threaded lid with air ventilation to keep water fresh.[web:65]</li>
+          <li>Good balance of price and durability for residential use.</li>
+        </ul>
+        <div class="tag-grid">
+          <div class="tag">Astral Sylo 500 L</div>
+          <div class="tag">Astral Sylo 750 L</div>
+          <div class="tag">Astral Sylo 1000 L</div>
+          <div class="tag">Astral Sylo 1500 L</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Pio & Delta – HDPE Multi-Layer Tanks</h3>
+        <span class="badge-small">High Strength HDPE[web:59][web:63][web:66]</span>
+        <ul>
+          <li>Made from 100% virgin HDPE for high strength and long life.[web:63][web:66]</li>
+          <li>UV-stabilised, corrosion-resistant and leak-proof design.[web:66]</li>
+          <li>Suitable for residential, commercial and agricultural storage.[web:63][web:66]</li>
+          <li>Capacity range typically 500 L – 10,000 L.[web:63]</li>
+        </ul>
+        <div class="tag-grid">
+          <div class="tag">Astral Pio 500–5000 L</div>
+          <div class="tag">Astral Delta 1000–10000 L</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Opta – Stylish 3 Layer Tank</h3>
+      <span class="badge-small">Household Aesthetic Tank[web:59][web:62]</span>
+      <ul>
+        <li>3-layer blow-moulded water tank with UV-stabilised exterior and anti-bacterial interior.[web:59][web:62]</li>
+        <li>Designed for households needing both strength and modern appearance.[web:59][web:63]</li>
+      </ul>
+      <div class="footer-cta">
+        <p>Raj Sanitary can arrange Astral Cleo, Vito, Sylo, Pio, Delta and Opta tanks as per availability in Rewa and nearby region. Share required capacity and model preference.</p>
+        <a href="contact.html">Ask for Astral Tanks</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WATERTECH RANGE -->
+  <section>
+    <h2 class="section-title">Watertech / Watertech-Type Tanks</h2>
+    <p class="section-sub">Economical LLDPE plastic water tanks commonly sold in the market under Watertech or similar branding – good for budget projects.</p>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>Watertech LLDPE Tanks (Typical)</h3>
+        <span class="badge-small">Budget-Friendly</span>
+        <ul>
+          <li>Made from LLDPE plastic suitable for non-pressurised water storage (overhead / ground level).</li>
+          <li>Standard UV-stabilised outer surface and food-grade inner surface (as offered by most Watertech-type tanks).</li>
+          <li>Common sizes used in homes and small commercial setups.</li>
+        </ul>
+        <div class="tag-grid">
+          <div class="tag">Watertech 300 L</div>
+          <div class="tag">Watertech 500 L</div>
+          <div class="tag">Watertech 750 L</div>
+          <div class="tag">Watertech 1000 L</div>
+          <div class="tag">Watertech 2000 L</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>When to Choose Watertech</h3>
+        <ul>
+          <li>Budget-sensitive projects where cost per litre is main priority.</li>
+          <li>Secondary / terrace tanks, farming and utility water storage.</li>
+          <li>Where high-end copper shield or multi-layer insulation is not required.</li>
+        </ul>
+        <div class="footer-cta">
+          <p>Tell whether you prefer Astral premium tanks or Watertech budget tanks and your daily water requirement. Raj Sanitary will suggest best combination with price options.</p>
+          <a href="tel:7000903314">Discuss on Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPACITY GUIDE -->
+  <section>
+    <h2 class="section-title">Capacity & Layer Guide</h2>
+    <p class="section-sub">Simple guide to help select tank size and number of layers for your home or project.</p>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>Capacity Selection</h3>
+        <div class="table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Usage</th>
+                <th>Recommended Capacity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Small family (2–3 people)</td>
+                <td>500 – 1000 L</td>
+              </tr>
+              <tr>
+                <td>Medium family (4–6 people)</td>
+                <td>1500 – 3000 L</td>
+              </tr>
+              <tr>
+                <td>Large house / duplex</td>
+                <td>3000 – 5000 L</td>
+              </tr>
+              <tr>
+                <td>Building / commercial</td>
+                <td>5000 – 10,000 L (multiple tanks)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Layers & Use Case</h3>
+        <ul>
+          <li><strong>2-layer (Sylo / Delta basic):</strong> Good UV protection + food-grade inner – suitable for general use.[web:59][web:65][web:68]</li>
+          <li><strong>3-layer (Vito / Opta / Pio):</strong> Better thermal insulation + antimicrobial inner – ideal for terraces.[web:59][web:63][web:66]</li>
+          <li><strong>4-layer (Cleo):</strong> Best hygiene with copper shield – premium residential, clinics, sensitive uses.[web:59][web:63][web:64][web:67]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page-footer">
+  © 2026 Raj Sanitary Rewa – Astral & Watertech Water Tanks. All Rights Reserved.
+</footer>
+
+</body>
+</html>

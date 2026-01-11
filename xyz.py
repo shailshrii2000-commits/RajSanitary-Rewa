@@ -1,5 +1,5 @@
 import requests
-url = "https://rk-creater-ctrl.github.io/CodeNexus/index.html"  # Replace with the website URL
+url = "https://shailshrii2000-commits.github.io/RajSanitary-Rewa/"  # Replace with the website URL
 response = requests.get(url)
 from bs4 import BeautifulSoup
 

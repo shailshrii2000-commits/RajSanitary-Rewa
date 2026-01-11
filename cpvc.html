@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astral CPVC Pipes & Fittings | Raj Sanitary Rewa</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f5f5;color:#111827;}
+
+/* HEADER (same family as other pages) */
+header{
+  background:#0b3c5d;
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#fff;
+}
+.logo-container{display:flex;align-items:center;gap:12px;}
+.logo-container img{height:52px;}
+.logo-container span{font-size:1.4rem;font-weight:700;letter-spacing:1px;}
+nav a{color:#e5e7eb;margin-left:22px;text-decoration:none;font-weight:500;font-size:.95rem;}
+nav a:hover{color:#ffcc00;}
+
+/* HERO */
+.hero{
+  background:
+    linear-gradient(135deg,rgba(0,0,0,.72),rgba(0,0,0,.55)),
+    url('cpcv-hero.jpg') center/cover no-repeat;
+  color:#fff;
+  padding:80px 20px 88px;
+}
+.hero-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+.hero h1{font-size:2.5rem;margin-bottom:10px;letter-spacing:.03em;}
+.hero h1 span{color:#ffcc00;}
+.hero p{font-size:1rem;line-height:1.8;color:#e5e7eb;max-width:560px;}
+.hero-badges{margin:16px 0 22px;display:flex;flex-wrap:wrap;gap:10px;}
+.hero-badge{
+  font-size:.78rem;
+  padding:5px 10px;
+  border-radius:999px;
+  border:1px solid rgba(249,250,251,.5);
+}
+.hero-cta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:8px;
+}
+.btn-primary,.btn-ghost{
+  padding:11px 22px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.btn-primary{background:#ffcc00;color:#111827;}
+.btn-ghost{border:1px solid #e5e7eb;color:#f9fafb;}
+.hero-side{
+  background:rgba(15,23,42,.78);
+  border-radius:18px;
+  padding:20px 22px;
+  box-shadow:0 18px 50px rgba(15,23,42,.55);
+}
+.hero-side h3{font-size:1.15rem;margin-bottom:10px;}
+.hero-side ul{list-style:none;font-size:.9rem;color:#e5e7eb;line-height:1.7;}
+.hero-side li{margin-bottom:6px;}
+
+/* WRAPPER */
+main{max-width:1200px;margin:-30px auto 40px;background:#f9fafb;border-radius:24px;box-shadow:0 18px 60px rgba(15,23,42,.12);padding:30px 24px 34px;}
+
+/* SECTION TITLES */
+.section-title{font-size:1.5rem;color:#0b3c5d;margin-bottom:6px;}
+.section-sub{font-size:.92rem;color:#6b7280;margin-bottom:18px;}
+
+/* LAYOUT */
+.two-col{display:grid;grid-template-columns:1.05fr 1fr;gap:26px;margin-bottom:28px;}
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:18px 18px 20px;
+  box-shadow:0 10px 30px rgba(15,23,42,.06);
+}
+.card h3{font-size:1.15rem;margin-bottom:6px;color:#111827;}
+.card ul{font-size:.9rem;color:#4b5563;line-height:1.7;margin-left:16px;}
+.card ul li{margin-bottom:4px;}
+.badge-small{
+  display:inline-block;
+  padding:3px 9px;
+  border-radius:999px;
+  background:#e0f2fe;
+  color:#0b3c5d;
+  font-size:.78rem;
+  font-weight:600;
+}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;margin-top:10px;}
+.spec-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.86rem;
+}
+.spec-table th,.spec-table td{
+  padding:9px 10px;
+  border-bottom:1px solid #e5e7eb;
+  text-align:left;
+}
+.spec-table th{
+  background:#0b3c5d;
+  color:#f9fafb;
+  font-weight:600;
+}
+
+/* TAG GRID */
+.tag-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:8px;
+  margin-top:10px;
+}
+.tag{
+  font-size:.82rem;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px dashed #cbd5e1;
+  background:#f9fafb;
+}
+
+/* FOOTER CTA */
+.footer-cta{
+  background:#fffbeb;
+  border-radius:18px;
+  padding:18px 18px 20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-top:12px;
+}
+.footer-cta p{font-size:.9rem;color:#4b5563;max-width:520px;}
+.footer-cta a{
+  background:#0b3c5d;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:600;
+}
+
+/* PAGE FOOTER (simple) */
+.page-footer{
+  background:#111827;
+  color:#9ca3af;
+  text-align:center;
+  padding:18px 16px;
+  font-size:.8rem;
+  margin-top:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:24px;}
+  main{margin:-20px 12px 30px;padding:22px 14px 26px;}
+  .two-col{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-container">
+    <img src="logo.png" alt="Raj Sanitary">
+    <span>RAJ SANITARY</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1><span>Astral CPVC</span> Pipes & Fittings</h1>
+      <p>
+        Hot & cold water plumbing system using Astral CPVC Pro / FlowGuard Plus pipes and fittings – ideal for residential, commercial and industrial applications, with working temperature up to 93°C.[web:20][web:53]
+      </p>
+      <div class="hero-badges">
+        <span class="hero-badge">Authorized Astral Dealer</span>
+        <span class="hero-badge">IS 15778 & ASTM Certified[web:50][web:53]</span>
+        <span class="hero-badge">SDR 11 & SDR 13.5</span>
+      </div>
+      <div class="hero-cta">
+        <a href="tel:7000903314" class="btn-primary">
+          <i class="fa-solid fa-phone"></i> Call to Enquire
+        </a>
+        <a href="contact.html" class="btn-ghost">
+          Get CPVC Quote
+        </a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <h3>Quick Highlights</h3>
+      <ul>
+        <li>Hot & cold water plumbing up to 93°C.[web:20][web:53]</li>
+        <li>Available in SDR 11 & SDR 13.5, CTS & IPS sizes.[web:50]</li>
+        <li>Corrosion free, scale resistant & long service life.[web:20][web:53]</li>
+        <li>Complete range – pipes, fittings, valves & solvent cement.[web:50][web:55]</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- PIPES -->
+  <section>
+    <h2 class="section-title">CPVC Pipes – Astral</h2>
+    <p class="section-sub">Standard pressure pipes for hot & cold water lines in bathrooms, kitchens, overhead tanks and solar water systems.</p>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>Pipe Types</h3>
+        <span class="badge-small">Astral CPVC Pro / FlowGuard Plus[web:20][web:50][web:53]</span>
+        <ul>
+          <li>CPVC Pipe SDR 11 – Class 1 (Higher pressure rating).[web:50]</li>
+          <li>CPVC Pipe SDR 13.5 – Class 2.[web:50]</li>
+          <li>CPVC Pipe CTS (Copper Tube Size) – 15 mm to 50 mm.[web:50]</li>
+          <li>CPVC Pipe IPS (Iron Pipe Size) – larger sizes for higher flow.[web:50]</li>
+        </ul>
+        <div class="table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Common Sizes</th>
+                <th>Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>SDR 11</td>
+                <td>½", ¾", 1", 1¼", 1½", 2"</td>
+                <td>High pressure hot & cold water lines</td>
+              </tr>
+              <tr>
+                <td>SDR 13.5</td>
+                <td>½", ¾", 1", 1¼", 1½", 2"</td>
+                <td>Standard residential plumbing</td>
+              </tr>
+              <tr>
+                <td>CTS</td>
+                <td>15 – 50 mm</td>
+                <td>FlowGuard Plus systems</td>
+              </tr>
+              <tr>
+                <td>IPS</td>
+                <td>65 – 100 mm (SCH 40/80)*</td>
+                <td>High flow / industrial lines[web:50]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Applications</h3>
+        <ul>
+          <li>Internal hot & cold water distribution in houses and apartments.[web:20]</li>
+          <li>Plumbing in hotels, hospitals, schools and commercial buildings.[web:20][web:54]</li>
+          <li>Solar water heating and geyser connection lines.[web:20]</li>
+          <li>Industrial process lines where CPVC is compatible with the fluid.[web:53][web:55]</li>
+        </ul>
+        <div class="footer-cta">
+          <p>Share your line size (½", ¾", 1" etc.) and length in feet/meter. Raj Sanitary will calculate the required Astral CPVC pipe quantity for your site.</p>
+          <a href="contact.html">Send Requirement</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FITTINGS -->
+  <section>
+    <h2 class="section-title">CPVC Fittings</h2>
+    <p class="section-sub">Complete Astral CPVC fittings range for elbows, tees, couplers, adapters and special items – all in SDR 11 as per ASTM standards.[web:50][web:55]</p>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>Standard Fittings</h3>
+        <ul>
+          <li><strong>Elbows:</strong> 90° Elbow, 45° Elbow.[web:55]</li>
+          <li><strong>Tees:</strong> Equal Tee, Reducing Tee.[web:55]</li>
+          <li><strong>Couplers:</strong> Plain Coupler, Reducing Coupler, Slip Coupler.[web:50][web:58]</li>
+          <li><strong>Adapters:</strong> MTA (Male Threaded Adapter), FTA (Female Threaded Adapter).[web:55]</li>
+          <li><strong>End & Special:</strong> End Cap, Plug, Union, Tank Nipple, Reducer Bush.[web:50][web:58]</li>
+        </ul>
+        <div class="tag-grid">
+          <div class="tag">90° Elbow ½" – 2"</div>
+          <div class="tag">Equal Tee ½" – 2"</div>
+          <div class="tag">MTA / FTA ½" – 2"</div>
+          <div class="tag">Plain / Reducing Coupler</div>
+          <div class="tag">Union & Tank Nipple</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Valves & Special Items</h3>
+        <ul>
+          <li>CPVC Ball Valve – for on/off control in lines.[web:55][web:58]</li>
+          <li>CPVC Concealed Stop Valve – for bathroom concealed installation.</li>
+          <li>CPVC Angle Valve – wash basin and geyser connections.</li>
+          <li>Brass threaded CPVC fittings (MTA / FTA / Elbow with brass insert) for transition to metal pipes.[web:55]</li>
+        </ul>
+        <div class="footer-cta">
+          <p>Raj Sanitary keeps a full range of Astral CPVC elbows, tees, couplers, MTAs, FTAs and valves so plumbers can complete the entire line from one shop.</p>
+          <a href="tel:7000903314">Check Stock on Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESSORIES -->
+  <section>
+    <h2 class="section-title">CPVC Accessories</h2>
+    <p class="section-sub">Essential accessories required for correct installation of CPVC pipes and fittings.</p>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>Solvent & Chemicals</h3>
+        <ul>
+          <li>Astral CPVC Solvent Cement – medium & heavy duty for hot & cold water lines.[web:50][web:53]</li>
+          <li>CPVC Cleaner / Primer – surface preparation for better joint strength.[web:20][web:55]</li>
+          <li>Thread Seal Tape – for threaded joints (MTAs, FTAs, valves).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Support & Fittings Hardware</h3>
+        <ul>
+          <li>Pipe Clamps and Saddles for proper support spacing.[web:58]</li>
+          <li>Rubber rings and flanges for special industrial connections.[web:53][web:55]</li>
+        </ul>
+        <div class="footer-cta">
+          <p>Ask for Astral-recommended solvent and accessories with every CPVC pipe purchase to ensure leak-proof, long-lasting joints.</p>
+          <a href="contact.html">Ask for Guidance</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page-footer">
+  © 2026 Raj Sanitary Rewa – Astral CPVC Pipes & Fittings. All Rights Reserved.
+</footer>
+
+</body>
+</html>

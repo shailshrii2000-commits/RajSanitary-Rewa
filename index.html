@@ -3,174 +3,421 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raj Sanitary Rewa | Premium Sanitary & Hardware</title>
+<title>Raj Sanitary Rewa | Authorized Astral Dealer</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:"Segoe UI",sans-serif;
+  font-family:'Poppins',sans-serif;
 }
 
 body{
-  background:#ffffff;
-  color:#1f2933;
-  scroll-behavior:smooth;
+  background:#f7f7f7;
+  color:#333;
 }
 
+/* HEADER */
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#ffffff;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  background:#0b3c5d;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#fff;
 }
 
+header h1{
+  font-size:1.6rem;
+  font-weight:700;
+}
+
+nav a{
+  color:#fff;
+  margin-left:25px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:#ffcc00;
+}
+
+/* HERO */
 .hero{
+  background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
-  padding:90px 20px;
-  background:linear-gradient(135deg,#c1121f,#e63946);
-  color:white;
+  color:#fff;
+  padding:20px;
 }
 
-.hero h1{
-  font-size:2.8rem;
-  margin-bottom:20px;
+.hero h2{
+  font-size:2.6rem;
+  margin-bottom:15px;
 }
 
 .hero p{
-  max-width:800px;
+  max-width:900px;
   margin:auto;
   font-size:1.1rem;
-  opacity:.95;
+  line-height:1.7;
 }
 
-.btn{
+.hero .btn{
   display:inline-block;
-  margin-top:30px;
-  padding:14px 36px;
-  background:#facc15;
+  margin-top:25px;
+  padding:14px 32px;
+  background:#ffcc00;
   color:#000;
-  font-weight:bold;
+  font-weight:600;
   border-radius:30px;
   text-decoration:none;
-  transition:.4s;
 }
 
-.btn:hover{
-  transform:scale(1.08);
-  box-shadow:0 0 20px rgba(250,204,21,.7);
+/* SECTION */
+section{
+  padding:70px 40px;
+  max-width:1200px;
+  margin:auto;
 }
 
-.section{
-  padding:80px 20px;
+section h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:2.2rem;
+  color:#0b3c5d;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card i{
+  font-size:2.8rem;
+  color:#0b3c5d;
+  margin-bottom:15px;
+}
+
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo-container img{
+  height:60px;
+  width:auto;
+  object-fit:contain;
+}
+
+.logo-container span{
+  font-size:1.6rem;
+  font-weight:700;
+  color:#fff;
+  white-space:nowrap;
+}
+
+
+/* ASTRAL */
+.astral{
+  background:#0b3c5d;
+  color:#fff;
+  border-radius:18px;
+  padding:50px;
   text-align:center;
 }
 
-.section h2{
-  font-size:2.4rem;
-  color:#c1121f;
-  margin-bottom:50px;
+.astral h2{
+  color:#ffcc00;
 }
 
-.card-grid{
+.astral p{
+  max-width:900px;
+  margin:auto;
+  line-height:1.7;
+}
+
+/* WHY US */
+.why ul{
+  max-width:800px;
+  margin:auto;
+  list-style:none;
+  font-size:1.05rem;
+}
+
+.why li{
+  margin-bottom:12px;
+}
+
+/* CTA */
+.cta{
+  background:#ffcc00;
+  text-align:center;
+  padding:70px 20px;
+}
+
+.cta h2{
+  color:#000;
+}
+
+.cta p{
+  max-width:800px;
+  margin:20px auto;
+}
+
+.cta .btn{
+  background:#0b3c5d;
+  color:#fff;
+  padding:14px 32px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.astral-mini-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:30px;
   max-width:1200px;
-  margin:auto;
+  margin:60px auto;
+  padding:0 20px;
 }
 
-.card{
-  background:#ffffff;
-  padding:30px;
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+.astral-mini-card{
+  background:#fff;
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.1);
   transition:.4s;
 }
 
-.card:hover{
-  transform:translateY(-12px);
-  box-shadow:0 20px 45px rgba(193,18,31,0.3);
+.astral-mini-card:hover{
+  transform:translateY(-10px);
 }
 
-.highlight{
-  background:#f9fafb;
-  padding:70px 20px;
+.astral-mini-card h4{
   text-align:center;
+  color:#0b3c5d;
+  margin-bottom:12px;
 }
 
-.highlight p{
-  max-width:900px;
-  margin:auto;
-  font-size:1.05rem;
+.astral-logo{
+  width:180px;
+  margin:20px auto 30px;
+  display:block;
+  filter:drop-shadow(0 6px 18px rgba(0,0,0,0.25));
 }
 
-.highlight ul{
-  max-width:800px;
-  margin:30px auto 0;
-  list-style:none;
-}
-
-.highlight li{
-  padding:12px;
-  font-size:1.05rem;
-}
-
-.cta{
-  background:linear-gradient(135deg,#c1121f,#e63946);
-  color:white;
-  padding:80px 20px;
-  text-align:center;
-}
-
-/* ===== ABOUT SECTION ENHANCED ===== */
-.about-wrap{
-  background:linear-gradient(180deg,#fff,#fde8e8,#fff);
-  padding:90px 20px;
-}
-
-.about-container{
-  max-width:1200px;
-  margin:auto;
+.astral-flex{
   display:flex;
   align-items:center;
   gap:40px;
-  flex-wrap:wrap;
+  text-align:left;
 }
 
-.about-text{
-  flex:1;
+.astral-logo-left{
+  width:200px;
+  flex-shrink:0;
+  filter:drop-shadow(0 10px 25px rgba(0,0,0,0.35));
+}
+
+.astral-content h2{
+  color:#ffcc00;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .astral-flex{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .astral-logo-left{
+    margin-bottom:20px;
+  }
+}
+
+.astral-content h2{
+  color:#ffcc00;
+}
+
+.astral-title{
+  display:inline-flex;
+  align-items:center;
+  gap:16px;
+  color:#ffcc00;
+}
+
+.astral{
   text-align:center;
 }
 
-.about-text p{
-  font-size:1.08rem;
-  line-height:1.7;
+.astral-title img{
+  width:42px;
+  height:auto;
 }
 
-.about-img{
-  width:260px;
-  height:200px;
-  border-radius:20px;
+.astral-center{
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.astral-title{
+  display:inline-flex;
+  align-items:center;
+  gap:16px;
+  color:#ffcc00;
+  margin-bottom:25px;
+}
+
+.astral-title img{
+  width:42px;
+  height:auto;
+}
+
+
+/* Mobile */
+@media(max-width:900px){
+  .astral-flex{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .astral-logo-left{
+    margin-bottom:20px;
+  }
+}
+
+.mini-slider{
+  height:220px;
+  position:relative;
   overflow:hidden;
-  box-shadow:0 15px 40px rgba(193,18,31,0.3);
-  transform:rotate(-6deg);
+  border-radius:16px;
 }
 
-.about-img.right{
-  transform:rotate(6deg);
+.mini-slider img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  opacity:0;
+  transition:opacity .8s ease;
 }
 
-.about-img img{
+.mini-slider img.active{
+  opacity:1;
+}
+
+/* HERO SLIDESHOW */
+.hero{
+  position:relative;
+  height:90vh;
+  overflow:hidden;
+}
+
+.hero-slide{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:opacity 1.5s ease;
+}
+
+.hero-slide.active{
+  opacity:1;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.55);
+}
+
+/* ===== PROFESSIONAL ABOUT PHOTO STYLE ===== */
+
+.pro-about{
+  align-items:center;
+}
+
+.about-photo{
+  width:280px;
+  height:360px;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 20px 45px rgba(0,0,0,0.18);
+  background:#fff;
+}
+
+.about-photo img{
   width:100%;
   height:100%;
   object-fit:cover;
 }
 
+/* subtle professional offset (NOT tilted) */
+.about-photo.left{
+  margin-top:40px;
+}
+
+.about-photo.right{
+  margin-bottom:40px;
+}
+
+.pro-text{
+  background:#ffffff;
+  padding:40px;
+  border-radius:22px;
+  box-shadow:0 20px 50px rgba(193,18,31,0.18);
+  text-align:center;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .about-photo{
+    width:100%;
+    height:260px;
+    margin:0;
+  }
+
+  .pro-text{
+    padding:28px;
+  }
+}
+
+
+/* FOOTER */
 .footer{
   background:#1f2933;
   color:#ccc;
@@ -206,337 +453,359 @@ header{
   font-size:13px;
 }
 
-.whatsapp-icon{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25d366;
-  color:white;
-  padding:14px;
-  border-radius:50%;
-  font-size:24px;
-  box-shadow:0 0 20px rgba(37,211,102,.7);
+.about-img {
+    width: 260px;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(193, 18, 31, 0.3);
+    transform: rotate(-6deg);
+}
+.about-text {
+    flex: 1;
+    text-align: center;
+}
+.about-img.right {
+    transform: rotate(6deg);
 }
 
-.scroll-animate{
-  opacity:0;
-  transform:translateY(50px);
-  transition:all .9s ease;
-}
+/* ===== ABOUT SECTION (LIKE IMAGE SHOWN) ===== */
 
-.scroll-animate.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* ===== ASTRAL FIRST IMPRESSION ===== */
-/* ===== ASTRAL MINI GRID SIZE INCREASE ===== */
-
-/* ===== ASTRAL MINI GRID – 4 IN ONE ROW ===== */
-
-.astral-mini-grid{
-  display:grid;
-  grid-template-columns:repeat(4, 1fr);   /* 🔥 4 cards in one row */
-  gap:30px;
-  max-width:1300px;
-  margin:80px auto;
-  padding:0 20px;
-}
-
-/* Tablet */
-@media (max-width:1024px){
-  .astral-mini-grid{
-    grid-template-columns:repeat(2, 1fr);
-  }
-}
-
-/* Mobile */
-@media (max-width:640px){
-  .astral-mini-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-
-.astral-mini-card{
-  background:#ffffff;
-  border-radius:22px;
-  padding:22px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.1);
-  transition:0.4s;
-}
-
-.astral-mini-card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 25px 55px rgba(193,18,31,0.35);
-}
-
-.astral-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:14px;
-  background:#fff;
-  padding:12px 26px;
-  border-radius:40px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.12);
-  font-weight:700;
-  font-size:18px;            /* 🔥 text size increased */
-  color:#c1121f;
-}
-
-.astral-badge img{
-  height:42px;               /* 🔥 logo size increased */
-  width:auto;
-}
-
-/* Title bigger */
-.astral-mini-card h4,
-.astral-title{
-  font-size:1.25rem;
-  font-weight:700;
+.about-like{
+  background:linear-gradient(180deg,#fff,#fdecec,#fff);
+  padding:90px 20px;
   text-align:center;
+}
+
+.about-like h2{
+  font-size:2.6rem;
+  font-weight:700;
   color:#c1121f;
-  margin-bottom:14px;
+  margin-bottom:40px;
 }
 
-/* Slider container bigger */
-.mini-slider{
-  width:100%;
-  height:220px;   /* 🔥 IMAGE HEIGHT INCREASED */
-  border-radius:16px;
+.about-like-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1.4fr 1fr;
+  align-items:center;
+  gap:40px;
+}
+
+.about-like-text{
+  font-size:1.08rem;
+  line-height:1.8;
+  color:#1f2933;
+}
+
+.about-like-text p{
+  margin-bottom:25px;
+}
+
+/* Image Cards */
+.about-like-img{
+  width:260px;
+  height:200px;
+  margin:auto;
+  border-radius:18px;
   overflow:hidden;
-  position:relative;
+  background:#fff;
+  box-shadow:0 18px 40px rgba(193,18,31,0.25);
 }
 
-/* Images bigger */
-.mini-slider img{
+.about-like-img img{
   width:100%;
   height:100%;
   object-fit:cover;
-  position:absolute;
-  opacity:0;
-  transition:opacity 0.8s ease-in-out, transform 0.6s ease;
 }
 
-.mini-slider img.active{
-  opacity:1;
-  transform:scale(1.05);
+/* Slight professional tilt */
+.about-like-img.left{
+  transform:rotate(-6deg);
 }
 
+.about-like-img.right{
+  transform:rotate(6deg);
+}
+
+/* Mobile Responsive */
+@media(max-width:900px){
+  .about-like-container{
+    grid-template-columns:1fr;
+  }
+
+  .about-like-img{
+    width:90%;
+    height:220px;
+    transform:none;
+  }
+}
 
 </style>
-
-<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
 
 <!-- HEADER -->
-<header class="bg-white shadow sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
-    <div class="flex items-center gap-3">
-      <img src="logo.png" alt="Raj Sanitary Logo" class="h-16 md:h-20">
-      <span class="text-xl font-bold text-red-700">RAJ SANITARY</span>
-    </div>
-    <nav class="hidden md:flex gap-6 font-medium">
-      <a href="index.html" class="text-red-700">Home</a>
-      <a href="products.html" class="hover:text-red-700">Products</a>
-      <a href="contact.html" class="hover:text-red-700">Contact</a>
-    </nav>
-    <a href="tel:7000903314" class="bg-yellow-400 px-4 py-2 rounded font-semibold">Call Now</a>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero scroll-animate">
-
-  <!-- ASTRAL BADGE -->
-  <div class="astral-badge">
-  <img src="astral.logo.jpg" alt="Astral Logo">
-  <span>Authorized ASTRAL Dealer</span>
+<header>
+  <div class="logo-container">
+  <img src="logo.png" alt="Raj Sanitary Logo">
+  <span>RAJ SANITARY</span>
 </div>
 
-  <h1>Premium Sanitary, Hardware & Paint Solutions</h1>
-
-<p>
-  Official ASTRAL agency in Rewa for CPVC Pipes, SWR Ring Fit Pipes,
-  Water Tanks, and Premium Bathware. <br><br>
-  We are also a trusted Nerolac Paints dealer, providing high-quality interior and exterior paints,
-  primers, and coatings to give your home a fresh, vibrant, and long-lasting finish.
-</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
 
-  <a href="products.html" class="btn">Explore Products</a>
-
-  <!-- ASTRAL PRODUCT PREVIEW -->
-  <div class="astral-mini-grid">
-
-    <div class="astral-mini-card">
-      <h4>ASTRAL CPVC Pipes</h4>
-      <div class="mini-slider cpvc-mini">
-        <img src="cpcv.jpg" class="active">
-        <img src="cpcv1.webp">
-        <img src="cpvc3.jpg">
-      </div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-slide active" style="background-image:url('showroom.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('showroom1.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('showroom2.jpeg')"></div>
+  <div class="hero-slide" style="background-image:url('showroom3.jpeg')"></div>
+  <div class="hero-slide" style="background-image:url('showroom4.jpeg')"></div>
+  <div class="hero-content">
+    <div>
+      <h2>Premium Sanitary & Plumbing Solutions</h2>
+      <p>
+        Raj Sanitary is Rewa’s trusted destination for premium sanitaryware,
+        modern bathroom fittings, and complete plumbing solutions.
+        <br><br>
+        <strong>Authorized ASTRAL Dealer</strong> for genuine CPVC pipes,
+        SWR systems, water tanks & bathware.
+      </p>
+      <a href="#" class="btn">Visit Our Store</a>
     </div>
-
-    <div class="astral-mini-card">
-      <h4>ASTRAL SWR Pipes</h4>
-      <div class="mini-slider swr-mini">
-        <img src="swr.webp" class="active">
-        <img src="swr1.jpg">
-        <img src="swr3.jpg">
-      </div>
-    </div>
-
-    <div class="astral-mini-card">
-      <h4>ASTRAL Water Tanks</h4>
-      <div class="mini-slider tank-mini">
-        <img src="watertank.jpg" class="active">
-        <img src="watertank1.jpg">
-        <img src="watertank2.jpg">
-      </div>
-    </div>
-
-    <div class="astral-mini-card">
-      <h4>ASTRAL Bathware</h4>
-      <div class="mini-slider bath-mini">
-        <img src="abathware.png" class="active">
-        <img src="bathware.jpg">
-        <img src="bathware.jpg">
-      </div>
-    </div>
-
   </div>
-</section>
+</div>
 
 
-<!-- CATEGORIES -->
-<section class="section scroll-animate">
+<!-- PRODUCTS -->
+<section>
   <h2>Our Product Categories</h2>
-  <div class="card-grid">
+  <div class="cards">
     <div class="card">
-      <h3 class="font-bold text-lg mb-2">Sanitaryware</h3>
-      <p>Basins, Western & Indian Toilets, Sinks, Urinals</p>
+      <i class="fa-solid fa-toilet"></i>
+      <h3>Sanitaryware</h3>
+      <p>
+        Basins, Western & Indian toilets, sinks, urinals, and ceramic sanitaryware
+        designed for hygiene, durability, and modern bathrooms.
+      </p>
     </div>
     <div class="card">
-      <h3 class="font-bold text-lg mb-2">Bathroom Fittings</h3>
-      <p>Taps, Showers, Mixer Sets, Angle Valves</p>
+      <i class="fa-solid fa-shower"></i>
+      <h3>Bathroom Fittings</h3>
+      <p>
+        Premium taps, showers, mixer sets, angle valves, and accessories
+        combining water efficiency with elegant design.
+      </p>
     </div>
     <div class="card">
-      <h3 class="font-bold text-lg mb-2">Pipes & Plumbing</h3>
-      <p>PVC, CPVC, UPVC Pipes & Accessories</p>
+      <i class="fa-solid fa-pipe"></i>
+      <h3>Pipes & Plumbing</h3>
+      <p>
+        High-quality PVC, CPVC, UPVC pipes and fittings for residential,
+        commercial, and industrial plumbing needs.
+      </p>
     </div>
   </div>
 </section>
+
+<!-- ASTRAL SECTION -->
+<section class="astral">
+  <div class="astral-center">
+    <h2 class="astral-title">
+      <img src="astral.logo.jpg" alt="Astral Logo"style="width:75px; height=50px;">
+      Authorized ASTRAL Dealer
+    </h2>
+
+    <p>
+      We proudly deal in genuine ASTRAL products including CPVC plumbing systems,
+      SWR Ring Fit pipes, underground drainage solutions, and water storage tanks.
+      <br><br>
+      Astral products are known for their superior quality, long life,
+      and international manufacturing standards — ensuring safe and reliable plumbing
+      for every project.
+    </p>
+  </div>
+</section>
+
+
+
+
+<!-- ASTRAL PRODUCT SLIDER -->
+<div class="astral-mini-grid">
+  <div class="astral-mini-card">
+    <h4>ASTRAL CPVC Pipes</h4>
+    <div class="mini-slider cpvc-mini">
+      <img class="active" src="cpcv.jpg">
+      <img src="cpcv1.webp">
+      <img src="cpcv2.jpg">
+    </div>
+  </div>
+
+  <div class="astral-mini-card">
+    <h4>ASTRAL SWR Pipes</h4>
+    <div class="mini-slider swr-mini">
+      <img class="active" src="swr.webp">
+      <img src="swr1.jpg">
+      <img src="swr2.jpg">
+    </div>
+  </div>
+
+  <div class="astral-mini-card">
+    <h4>ASTRAL Water Tanks</h4>
+    <div class="mini-slider tank-mini">
+      <img class="active" src="watertank.jpg">
+      <img src="watertank1.jpg">
+      <img src="watertank2.jpg">
+    </div>
+  </div>
+
+  <div class="astral-mini-card">
+    <h4>ASTRAL Bathware</h4>
+    <div class="mini-slider bath-mini">
+      <img class="active" src="abathware.png">
+      <img src="bathware.jpg">
+      <img src="bathware.jpg">
+    </div>
+  </div>
+</div>
 
 <!-- ABOUT -->
-<section class="about-wrap scroll-animate">
-  <div class="about-container">
+<section class="about-like scroll-animate">
+  <h2>About Raj Sanitary</h2>
+
+  <div class="about-like-container">
 
     <!-- Left Image -->
-    <div class="about-img">
-      <img src="showroom1.jpg" alt="Raj Sanitary Showroom">
+    <div class="about-like-img left">
+      <img src="showroom1.jpg" alt="Sanitary Display">
     </div>
 
-    <!-- Text -->
-    <div class="about-text">
-      <h2 class="text-3xl font-bold text-red-700 mb-4">About Raj Sanitary</h2>
+    <!-- Center Text -->
+    <div class="about-like-text">
       <p>
-        Raj Sanitary is a trusted and well-established sanitary & hardware store in Rewa,
-        known for delivering premium-quality bathroom fittings, sanitaryware, pipes,
-        plumbing solutions, and high-quality Nerolac Paints.<br><br>
-        With a strong focus on durability, modern design, and fair pricing,
-        we proudly serve homeowners, builders, and contractors with reliable products
-        and expert guidance.
+        Raj Sanitary is a trusted and well-established sanitary and hardware store in Rewa, built on over 25 years of experience and customer trust. We are known for delivering premium-quality sanitaryware, modern bathroom fittings, reliable plumbing solutions, and high-quality Nerolac Paints—all under one roof.
       </p>
 
+      <p>
+        With a strong focus on durability, modern design, and honest pricing, we help homeowners, builders, and contractors choose the right products for long-lasting performance and refined aesthetics. Our commitment to quality products, expert guidance, and customer-focused service has made Raj Sanitary a preferred choice in Rewa for generations.
+      
+      </p>
     </div>
 
     <!-- Right Image -->
-    <div class="about-img right">
-      <img src="showroom3.jpeg" alt="Sanitary Products Display">
+    <div class="about-like-img right">
+      <img src="showroom3.jpeg" alt="Wash Basin Collection">
     </div>
 
   </div>
 </section>
 
 
-<!-- WHY CHOOSE US -->
-<section class="highlight scroll-animate">
-  <h2 class="text-3xl font-bold text-red-700 mb-4">Why Choose Us</h2>
+
+<!-- WHY US -->
+<section class="why">
+  <h2>Why Choose Us</h2>
   <ul>
     <li>✔ Wide range of premium sanitary & hardware products</li>
     <li>✔ Trusted by homeowners and contractors</li>
     <li>✔ Honest pricing and quality assurance</li>
+    <li>✔ Trusted by builders & contractors in Rewa</li>
     <li>✔ Friendly service and expert guidance</li>
     <li>✔ High-quality Nerolac Paints for homes and commercial spaces</li>
   </ul>
 </section>
 
 <!-- CTA -->
-<section class="cta scroll-animate">
-  <h2>Build Your Perfect Bathroom Today</h2>
-  <a href="contact.html" class="btn">Contact Us</a>
-</section>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/917000903314" class="whatsapp-icon">
-<i class="fab fa-whatsapp"></i>
-</a>
+<div class="cta">
+  <h2>Design a Bathroom That Reflects Quality & Comfort</h2>
+  <p>
+    Visit Raj Sanitary today for premium sanitaryware, modern fittings,
+    and trusted plumbing solutions that last for years.
+  </p>
+  <a href="#" class="btn">Contact Us</a>
+</div>
 
 <!-- FOOTER -->
-<footer class="footer">
-<div class="footer-container">
-  <div>
-    <img src="logo.png" alt="Raj Sanitary Logo" class="h-16 mb-3">
-    <p>Premium Sanitary & Hardware Store in Rewa</p>
-  </div>
-  <div>
-    <h3>Quick Links</h3>
-    <a href="index.html">Home</a><br>
-    <a href="products.html">Products</a><br>
-    <a href="contact.html">Contact</a>
-  </div>
-  <div>
-    <h3>Contact</h3>
-    <p>📞 7000903314</p>
-    <p>📍 Rewa, Madhya Pradesh</p>
-  </div>
-</div>
-
-<div class="footer-bottom">
-© <span id="year"></span> Raj Sanitary. All Rights Reserved.
-</div>
-</footer>
+<!-- FOOTER -->
+  <footer class="footer">
+   <div class="footer-container">
+    <div>
+    <img alt="Raj Sanitary Logo" class="h-16 mb-3" src="logo.png" style="width:50px ; height:50px";>
+     <p>
+      Premium Sanitary &amp; Hardware Store in Rewa
+     </p>
+    </div>
+    <div>
+     <h3>
+      Quick Links
+     </h3>
+     <a href="index.html">
+      Home
+     </a>
+     <br/>
+     <a href="products.html">
+      Products
+     </a>
+     <br/>
+     <a href="contact.html">
+      Contact
+     </a>
+    </div>
+    <div>
+     <h3>
+      Contact
+     </h3>
+     <p>
+      📞 7000903314
+     </p>
+     <p>
+      📍 Near saman thiraha shop no. 12 shilpi kung rewa
+     </p>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    ©
+    <span id="year">
+    </span>
+    Raj Sanitary. All Rights Reserved.
+   </div>
+  </footer>
 
 <script>
 function miniSlider(cls){
-  const imgs=document.querySelectorAll(cls+" img");
-  let i=0;
-  setInterval(()=>{
+  const imgs = document.querySelectorAll(cls + " img");
+  let i = 0;
+  setInterval(() => {
     imgs[i].classList.remove("active");
-    i=(i+1)%imgs.length;
+    i = (i + 1) % imgs.length;
     imgs[i].classList.add("active");
-  },2500);
+  }, 2500);
 }
 
 miniSlider(".cpvc-mini");
 miniSlider(".swr-mini");
 miniSlider(".tank-mini");
 miniSlider(".bath-mini");
+
+
 </script>
-
 <script>
-document.getElementById("year").innerText=new Date().getFullYear();
+const slides = document.querySelectorAll(".hero-slide");
+let index = 0;
 
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){e.target.classList.add("show")}
-  })
-},{threshold:.15});
-
-document.querySelectorAll(".scroll-animate").forEach(el=>observer.observe(el));
+setInterval(()=>{
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+},4000);
 </script>
 
 </body>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SWR Pipes & Fittings | Raj Sanitary Rewa</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f5f5;color:#111827;}
+
+/* HEADER */
+header{
+  background:#0b3c5d;
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#fff;
+}
+.logo-container{display:flex;align-items:center;gap:12px;}
+.logo-container img{height:52px;}
+.logo-container span{font-size:1.4rem;font-weight:700;letter-spacing:1px;}
+nav a{color:#e5e7eb;margin-left:22px;text-decoration:none;font-weight:500;font-size:.95rem;}
+nav a:hover{color:#ffcc00;}
+
+/* HERO */
+.hero{
+  background:
+    linear-gradient(135deg,rgba(0,0,0,.75),rgba(0,0,0,.58)),
+    url('swr-hero.jpg') center/cover no-repeat;
+  color:#fff;
+  padding:80px 20px 88px;
+}
+.hero-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+.hero h1{font-size:2.5rem;margin-bottom:10px;letter-spacing:.03em;}
+.hero h1 span{color:#ffcc00;}
+.hero p{font-size:1rem;line-height:1.8;color:#e5e7eb;max-width:560px;}
+.hero-badges{margin:16px 0 22px;display:flex;flex-wrap:wrap;gap:10px;}
+.hero-badge{
+  font-size:.78rem;
+  padding:5px 10px;
+  border-radius:999px;
+  border:1px solid rgba(249,250,251,.5);
+}
+.hero-cta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:8px;
+}
+.btn-primary,.btn-ghost{
+  padding:11px 22px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.btn-primary{background:#ffcc00;color:#111827;}
+.btn-ghost{border:1px solid #e5e7eb;color:#f9fafb;}
+.hero-side{
+  background:rgba(15,23,42,.78);
+  border-radius:18px;
+  padding:20px 22px;
+  box-shadow:0 18px 50px rgba(15,23,42,.55);
+}
+.hero-side h3{font-size:1.15rem;margin-bottom:10px;}
+.hero-side ul{list-style:none;font-size:.9rem;color:#e5e7eb;line-height:1.7;}
+.hero-side li{margin-bottom:6px;}
+
+/* WRAPPER */
+main{max-width:1200px;margin:-30px auto 40px;background:#f9fafb;border-radius:24px;box-shadow:0 18px 60px rgba(15,23,42,.12);padding:30px 24px 34px;}
+
+/* SECTION TITLES */
+.section-title{font-size:1.5rem;color:#0b3c5d;margin-bottom:6px;}
+.section-sub{font-size:.92rem;color:#6b7280;margin-bottom:18px;}
+
+/* LAYOUT */
+.two-col{display:grid;grid-template-columns:1.05fr 1fr;gap:26px;margin-bottom:28px;}
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:18px 18px 20px;
+  box-shadow:0 10px 30px rgba(15,23,42,.06);
+}
+.card h3{font-size:1.15rem;margin-bottom:6px;color:#111827;}
+.card ul{font-size:.9rem;color:#4b5563;line-height:1.7;margin-left:16px;}
+.card ul li{margin-bottom:4px;}
+.badge-small{
+  display:inline-block;
+  padding:3px 9px;
+  border-radius:999px;
+  background:#e0f2fe;
+  color:#0b3c5d;
+  font-size:.78rem;
+  font-weight:600;
+}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;margin-top:10px;}
+.spec-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.86rem;
+}
+.spec-table th,.spec-table td{
+  padding:9px 10px;
+  border-bottom:1px solid #e5e7eb;
+  text-align:left;
+}
+.spec-table th{
+  background:#0b3c5d;
+  color:#f9fafb;
+  font-weight:600;
+}
+
+/* TAG GRID */
+.tag-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:8px;
+  margin-top:10px;
+}
+.tag{
+  font-size:.82rem;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px dashed #cbd5e1;
+  background:#f9fafb;
+}
+
+/* FOOTER CTA */
+.footer-cta{
+  background:#eff6ff;
+  border-radius:18px;
+  padding:18px 18px 20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-top:12px;
+}
+.footer-cta p{font-size:.9rem;color:#4b5563;max-width:520px;}
+.footer-cta a{
+  background:#0b3c5d;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:600;
+}
+
+/* PAGE FOOTER */
+.page-footer{
+  background:#111827;
+  color:#9ca3af;
+  text-align:center;
+  padding:18px 16px;
+  font-size:.8rem;
+  margin-top:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:24px;}
+  main{margin:-20px 12px 30px;padding:22px 14px 26px;}
+  .two-col{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-container">
+    <img src="logo.png" alt="Raj Sanitary">
+    <span>RAJ SANITARY</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1><span>SWR</span> Pipes & Fittings</h1>
+      <p>
+        Soil, Waste & Rainwater (SWR) uPVC systems for toilets, bathrooms, kitchens and terrace rainwater drainage – available in Type A, B, C pipes with a complete range of fittings.[web:32][web:58]
+      </p>
+      <div class="hero-badges">
+        <span class="hero-badge">Soil, Waste & Rainwater</span>
+        <span class="hero-badge">Type A / B / C – IS 13592[web:29][web:58]</span>
+        <span class="hero-badge">Sizes: 75, 90, 110, 160 mm[web:29][web:58]</span>
+      </div>
+      <div class="hero-cta">
+        <a href="tel:7000903314" class="btn-primary">
+          <i class="fa-solid fa-phone"></i> Call for SWR Quote
+        </a>
+        <a href="contact.html" class="btn-ghost">
+          Share Site Details
+        </a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <h3>Where SWR Is Used</h3>
+      <ul>
+        <li>Toilet soil lines from WC to stack.[web:32]</li>
+        <li>Bathroom & kitchen waste water lines.</li>
+        <li>Floor traps & nahani traps.</li>
+        <li>Rainwater from roof/terrace to drain.[web:32]</li>
+        <li>Residential & commercial building drainage.[web:29]</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- SWR PIPES -->
+  <section>
+    <h2 class="section-title">SWR Pipes</h2>
+    <p class="section-sub">uPVC pipes for non-pressure drainage of soil, waste and rainwater as per IS 13592 – light, medium and heavy duty types.[web:29][web:58]</p>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>Pipe Types</h3>
+        <span class="badge-small">SWR – Soil, Waste & Rainwater</span>
+        <ul>
+          <li><strong>Type A:</strong> Light duty – vents & rainwater applications.[web:29]</li>
+          <li><strong>Type B:</strong> Medium duty – internal soil & waste lines.[web:29]</li>
+          <li><strong>Type C:</strong> Heavy duty – external & exposed drainage.[web:29]</li>
+          <li>SWR Single Socket Pipes with rubber ring (ring-fit).[web:58]</li>
+        </ul>
+        <div class="table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Common Use</th>
+                <th>Length</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>75 mm</td>
+                <td>Bathroom waste / small branches</td>
+                <td>3 m standard</td>
+              </tr>
+              <tr>
+                <td>90 mm</td>
+                <td>Rainwater & small stack lines</td>
+                <td>3 m standard</td>
+              </tr>
+              <tr>
+                <td>110 mm</td>
+                <td>Main toilet / soil stack lines</td>
+                <td>3 m standard</td>
+              </tr>
+              <tr>
+                <td>160 mm</td>
+                <td>Main building & external drains</td>
+                <td>3 m standard[web:29][web:58]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Pipe Jointing Systems</h3>
+        <ul>
+          <li><strong>Solvent Cement Joint:</strong> Pipes and fittings joined using SWR solvent cement for permanent leak-proof joints.[web:58]</li>
+          <li><strong>Rubber Ring (Ring-Fit) Joint:</strong> Single socket pipes with rubber ring for flexible, easy installation and thermal movement.[web:58]</li>
+        </ul>
+        <div class="footer-cta">
+          <p>Tell pipe size, number of floors and toilet count. Raj Sanitary can help you estimate required SWR pipe lengths and type selection for your building.</p>
+          <a href="contact.html">Get SWR Planning Help</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SWR FITTINGS -->
+  <section>
+    <h2 class="section-title">SWR Fittings</h2>
+    <p class="section-sub">Complete fittings range for direction change, junctions, access and floor-level drainage – matching SWR pipe sizes and duty class.[web:29][web:32][web:58]</p>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>Bends, Tees & Junctions</h3>
+        <ul>
+          <li><strong>Bends:</strong> 87.5° Bend, 45° Bend, Long Bend.</li>
+          <li><strong>Tees:</strong> Single Tee, Door Tee (with cleaning door), Cross Tee.</li>
+          <li><strong>Junctions:</strong> Y-Junction, Double Y-Junction for multiple connections.</li>
+          <li><strong>Access:</strong> Door Bend, Cleaning Eye, Inspection Fittings.[web:32][web:58]</li>
+        </ul>
+        <div class="tag-grid">
+          <div class="tag">87.5° Bend 75–160 mm</div>
+          <div class="tag">Single Tee 75–160 mm</div>
+          <div class="tag">Door Tee 75–160 mm</div>
+          <div class="tag">Y-Junction</div>
+          <div class="tag">Cross Tee</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Traps & Floor Drainage</h3>
+        <ul>
+          <li><strong>Traps:</strong> P-Trap, S-Trap for WC connections.</li>
+          <li><strong>Nahani / Floor Trap:</strong> For bath / wash area floor outlets.</li>
+          <li><strong>Multi-Inlet Traps:</strong> For connecting multiple waste pipes to one stack.[web:32]</li>
+          <li><strong>End Cap:</strong> Temporary or permanent end to a line.</li>
+        </ul>
+        <div class="tag-grid">
+          <div class="tag">WC P-Trap / S-Trap</div>
+          <div class="tag">Nahani Trap</div>
+          <div class="tag">Floor Trap</div>
+          <div class="tag">End Cap</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL ITEMS & ACCESSORIES -->
+  <section>
+    <h2 class="section-title">Special Items & Accessories</h2>
+    <p class="section-sub">Important items for venting, finishing and proper installation of SWR drainage systems.</p>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>Special SWR Items</h3>
+        <ul>
+          <li>Vent Cowl – for vent pipes above roof.[web:32]</li>
+          <li>WC Connector – flexible or rigid connector from WC to SWR pipe.</li>
+          <li>Offset Bend – for offsetting soil stack lines.</li>
+          <li>Rubber Ring / Gasket – for ring-fit pipes and fittings.[web:58]</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Installation Accessories</h3>
+        <ul>
+          <li>SWR Solvent Cement – for solvent joint SWR pipes & fittings.[web:58]</li>
+          <li>Rubber Lubricant – for easy insertion of ring-fit joints.</li>
+          <li>Pipe Clamps / Hangers – support system as per spacing guidelines.[web:58]</li>
+        </ul>
+        <div class="footer-cta">
+          <p>Raj Sanitary supplies SWR pipes, fittings and all required accessories so that your plumber can complete the full drainage line from one place.</p>
+          <a href="tel:7000903314">Check SWR Availability</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page-footer">
+  © 2026 Raj Sanitary Rewa – SWR Pipes & Fittings. All Rights Reserved.
+</footer>
+
+</body>
+</html>
