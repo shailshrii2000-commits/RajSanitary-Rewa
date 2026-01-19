@@ -5,10 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Products | Raj Sanitary Rewa</title>
 
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -18,16 +15,35 @@
   box-sizing:border-box;
   font-family:'Poppins',sans-serif;
 }
-
 body{
-  background:#f5f5f5;
+  background:#f3f4f6;
   color:#111827;
+}
+
+/* TOP CONTACT STRIP */
+.top-strip{
+  background:#fef3c7;
+  color:#92400e;
+  font-size:.9rem;
+  padding:6px 40px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  align-items:center;
+}
+.top-strip a{
+  color:#92400e;
+  text-decoration:none;
+  font-weight:600;
+}
+.top-strip i{
+  margin-right:6px;
 }
 
 /* HEADER */
 header{
   background:#0b3c5d;
-  padding:16px 40px;
+  padding:14px 40px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -35,357 +51,198 @@ header{
   position:sticky;
   top:0;
   z-index:50;
+  box-shadow:0 6px 18px rgba(15,23,42,0.35);
 }
-
 .logo-container{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:10px;
 }
-
 .logo-container img{
   height:52px;
+  width:auto;
+  object-fit:contain;
 }
-
 .logo-container span{
-  font-size:1.45rem;
+  font-size:1.5rem;
   font-weight:700;
-  letter-spacing:1px;
+  letter-spacing:.04em;
 }
-
 nav a{
   color:#e5e7eb;
-  margin-left:24px;
+  margin-left:22px;
   text-decoration:none;
   font-weight:500;
-  font-size:.95rem;
+  font-size:.94rem;
 }
-
 nav a:hover{
   color:#ffcc00;
 }
 
-/* PAGE HERO */
-.page-header{
-  background:
-    linear-gradient(135deg,rgba(0,0,0,.7),rgba(0,0,0,.55)),
-    url('showroom2.jpeg') center/cover no-repeat;
-  padding:80px 20px 88px;
-  text-align:center;
-  color:#fff;
-}
-
-.page-header h1{
-  font-size:2.6rem;
-  margin-bottom:10px;
-  letter-spacing:0.03em;
-}
-
-.page-header p{
-  max-width:720px;
-  margin:auto;
-  font-size:1.02rem;
-  line-height:1.7;
-  color:#e5e7eb;
-}
-
-/* MAIN WRAPPER */
-section{
-  padding:60px 40px;
+/* PAGE WRAPPER */
+main{
   max-width:1200px;
-  margin:auto;
+  margin:40px auto 60px;
+  padding:0 40px;
 }
-
-/* SECTION HEADING */
-section h2{
+.page-head{
   text-align:center;
+  margin-bottom:32px;
+}
+.page-head h1{
   font-size:2.1rem;
   color:#0b3c5d;
-  margin-bottom:14px;
 }
-
-.section-subtitle{
-  text-align:center;
+.page-head p{
   font-size:.95rem;
   color:#6b7280;
-  margin-bottom:28px;
+  margin-top:6px;
 }
 
-/* SEARCH BAR */
-.search-bar{
-  max-width:540px;
-  margin:0 auto 34px;
-  display:flex;
-  gap:10px;
-  background:#fff;
-  border-radius:999px;
-  box-shadow:0 10px 30px rgba(15,23,42,0.08);
-  padding:6px 8px 6px 16px;
-  align-items:center;
+/* BRAND SECTION TITLES */
+.brand-block{
+  margin-bottom:45px padding:25px;
 }
-
-.search-bar i{
-  color:#6b7280;
-  font-size:.95rem;
-}
-
-.search-bar input{
-  flex:1;
-  border:none;
-  outline:none;
-  padding:8px 10px;
-  font-size:.95rem;
-  color:#111827;
-}
-
-.search-bar button{
-  padding:9px 20px;
-  border-radius:999px;
-  border:none;
-  background:#0b3c5d;
-  color:#fff;
-  font-weight:600;
-  font-size:.9rem;
-  cursor:pointer;
-}
-
-/* PRODUCT GRID */
-.product-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:26px;
-}
-
-.product-card{
-  background:#fff;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 18px 45px rgba(15,23,42,.08);
-  transition:.28s ease;
-  cursor:pointer;
-  text-decoration:none;
-  color:inherit;
-  display:flex;
-  flex-direction:column;
-}
-
-.product-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 24px 60px rgba(15,23,42,.16);
-}
-
-.product-img{
-  height:200px;
-  background:#e5e7eb;
-}
-
-.product-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.product-content{
-  padding:20px 20px 22px;
-  text-align:left;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-
-.product-icon-title{
+.brand-title{
   display:flex;
   align-items:center;
   gap:10px;
-  margin-bottom:2px;
+  margin-bottom:16px;
 }
-
-.product-content i{
-  font-size:1.4rem;
+.brand-title h2{
+  font-size:1.5rem;
   color:#0b3c5d;
 }
-
-.product-content h3{
-  font-size:1.15rem;
-  margin:0;
-  color:#111827;
-}
-
-.product-tagline{
+.brand-title span{
   font-size:.86rem;
   color:#6b7280;
 }
 
-.product-content p{
+/* GRID / CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:22px;
+}
+.card{
+  background:#fff;
+  padding:22px 18px 20px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 10px 28px rgba(15,23,42,0.08);
+  transition:.25s ease;
+}
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(15,23,42,0.14);
+}
+.card h3{
+  margin-bottom:6px;
+  font-size:1.05rem;
+}
+.card p{
   font-size:.9rem;
-  line-height:1.6;
+  line-height:1.7;
   color:#4b5563;
-  margin-top:4px;
 }
 
-.product-meta{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-top:10px;
-  font-size:.85rem;
+/* SLIDESHOW INSIDE CARD */
+.card-slideshow{
+  position:relative;
+  width:100%;
+  height:160px;
+  border-radius:12px;
+  overflow:hidden;
+  margin-bottom:10px;
+}
+.card-slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity .7s ease;
+}
+.card-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.card-slide.active{
+  opacity:1;
 }
 
-.badge{
-  display:inline-block;
-  padding:4px 10px;
+/* VIEW BUTTON */
+.view-btn{
+  margin-top:12px;
+  padding:8px 18px;
   border-radius:999px;
-  background:#e0f2fe;
-  color:#0b3c5d;
-  font-weight:600;
-  font-size:.8rem;
-}
-
-.meta-link{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  color:#0b3c5d;
-  font-weight:600;
+  border:none;
+  background:#0b3c5d;
+  color:#f9fafb;
   font-size:.85rem;
-}
-
-.meta-link i{
-  font-size:.8rem;
-}
-
-/* BRAND STRIP */
-.brand-strip{
-  background:#0b3c5d;
-  padding:60px 20px;
-  text-align:center;
-  color:#fff;
-}
-
-.brand-strip h2{
-  color:#ffcc00;
-  margin-bottom:18px;
-  font-size:1.9rem;
-}
-
-.brand-strip p{
-  max-width:720px;
-  margin:0 auto 26px;
-  font-size:.95rem;
-  line-height:1.7;
-  color:#e5e7eb;
-}
-
-.brand-logos{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:40px;
-}
-
-.brand-logos img{
-  height:55px;
-  filter:drop-shadow(0 6px 16px rgba(0,0,0,.5));
-}
-
-/* CTA */
-.cta{
-  background:#ffcc00;
-  padding:60px 20px;
-  text-align:center;
-}
-
-.cta h2{
-  color:#111827;
-  font-size:2rem;
-}
-
-.cta p{
-  max-width:760px;
-  margin:18px auto 24px;
-  font-size:.98rem;
-  color:#374151;
-  line-height:1.7;
-}
-
-.cta a{
-  display:inline-block;
-  background:#0b3c5d;
-  color:#fff;
-  padding:13px 30px;
-  border-radius:30px;
-  text-decoration:none;
   font-weight:600;
-  font-size:.95rem;
+  cursor:pointer;
+  transition:.2s ease-in-out;
+}
+.view-btn:hover{
+  background:#ffcc00;
+  color:#111827;
+}
+
+/* ICONS ABOVE TITLE (OPTIONAL) */
+.card-icon{
+  font-size:2rem;
+  color:#0b3c5d;
+  margin-bottom:6px;
 }
 
 /* FOOTER */
 .footer{
   background:#111827;
   color:#9ca3af;
-  padding:45px 20px 20px;
+  padding:40px 20px 18px;
 }
-
 .footer-container{
   max-width:1200px;
   margin:auto;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px;
+  gap:26px;
 }
-
 .footer h3{
   color:#facc15;
-  margin-bottom:8px;
+  margin-bottom:6px;
   font-size:1rem;
 }
-
 .footer a{
   color:#d1d5db;
   text-decoration:none;
   font-size:.9rem;
 }
-
 .footer a:hover{
   color:#facc15;
 }
-
 .footer p{
   font-size:.9rem;
 }
-
 .footer-bottom{
   text-align:center;
-  margin-top:26px;
+  margin-top:18px;
   border-top:1px solid #4b5563;
-  padding-top:12px;
+  padding-top:8px;
   font-size:.8rem;
 }
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  section{
-    padding:46px 18px;
+  header{
+    padding:10px 18px;
   }
-  .page-header{
-    padding:64px 16px 70px;
+  main{
+    padding:0 18px;
   }
-  .page-header h1{
-    font-size:2.1rem;
-  }
-  .search-bar{
-    flex-direction:row;
-    padding:6px 10px;
-  }
-}
-
-@media(max-width:640px){
-  .search-bar{
-    flex-direction:column;
-    align-items:stretch;
-  }
-  .search-bar button{
-    width:100%;
+  .top-strip{
+    padding:6px 14px;
+    text-align:center;
   }
 }
 </style>
@@ -393,203 +250,280 @@ section h2{
 
 <body>
 
+<!-- TOP CONTACT STRIP -->
+<div class="top-strip">
+  <span><i class="fa-solid fa-phone"></i><a href="tel:7000903314">7000903314</a></span>
+  <span><i class="fa-solid fa-location-dot"></i>Near Saman Tiraha, Shop No. 12, Shilpi Kung, Rewa</span>
+</div>
+
 <!-- HEADER -->
 <header>
   <div class="logo-container">
-    <img src="logo.png" alt="Raj Sanitary">
+    <img src="logo.png" alt="Raj Sanitary Logo">
     <span>RAJ SANITARY</span>
   </div>
   <nav>
     <a href="index.html">Home</a>
     <a href="products.html">Products</a>
     <a href="contact.html">Contact</a>
+    <a href="catalog.html">Catalog & Pricelist</a>
   </nav>
 </header>
 
-<!-- PAGE HERO -->
-<div class="page-header">
-  <h1>Products & Solutions</h1>
-  <p>Explore sanitaryware, bathroom fittings, ASTRAL plumbing systems, water tanks and Nerolac paints – carefully curated for homes, builders and commercial projects in Rewa.</p>
-</div>
-
-<!-- PRODUCTS SECTION -->
-<section>
-  <h2>All Products</h2>
-  <p class="section-subtitle">Use the search to quickly find a product. Click any card to see full details, agencies and specifications.</p>
-
-  <!-- SEARCH -->
-  <div class="search-bar">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="text" id="searchInput" placeholder="Search by name, type or brand (e.g. CPVC, SWR, tank, Nerolac)">
-    <button id="searchBtn">Search</button>
+<main>
+  <div class="page-head">
+    <h1>Our Products</h1>
+    <p>Browse key product categories from Astral, Watertec, Nerolac and other products available at Raj Sanitary.</p>
   </div>
 
-  <!-- GRID -->
-  <div class="product-grid" id="productGrid">
+  <!-- ASTRAL BRAND BLOCK -->
+  <section class="brand-block" id="astral">
+    <div class="brand-title">
+      <img src="astral.logo.jpg" alt="Astral Logo" style="width:46px;height:auto;">
+      <h2>Astral</h2>
+      <span>Plumbing · Tanks · Bathware</span>
+    </div>
 
-    <!-- CPVC -->
-    <a href="cpvc.html" class="product-card"
-       data-name="cpvc pipes"
-       data-text="astral cpvc hot cold water plumbing pipe fitting">
-      <div class="product-img">
-        <img src="cpcv.jpg" alt="CPVC Pipes">
-      </div>
-      <div class="product-content">
-        <div class="product-icon-title">
-          <i class="fa-solid fa-pipe"></i>
-          <div>
-            <h3>CPVC Pipes & Fittings</h3>
-            <div class="product-tagline">ASTRAL hot & cold water plumbing</div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-slideshow">
+          <div class="card-slide active">
+            <img src="swr.webp" alt="Astral product 1">
+          </div>
+          <div class="card-slide">
+            <img src="cpcv1.webp" alt="Astral product 2">
+          </div>
+          <div class="card-slide">
+            <img src="" alt="Astral product 3">
           </div>
         </div>
-        <p>High-performance CPVC pipes and fittings designed for hot and cold water plumbing in residential and commercial projects.</p>
-        <div class="product-meta">
-          <span class="badge">Authorized Astral Dealer</span>
-          <span class="meta-link">View details <i class="fa-solid fa-arrow-right"></i></span>
-        </div>
+        <i class="fa-solid fa-pipe card-icon"></i>
+        <h3>Astral Pipes & Fittings</h3>
+        <p>CPVC and plumbing pipes with matching fittings for hot and cold water lines in homes and projects.</p>
+        <button class="view-btn">View</button>
       </div>
-    </a>
 
-    <!-- SWR -->
-    <a href="swr.html" class="product-card"
-       data-name="swr pipes"
-       data-text="astral swr drainage ring fit pipe">
-      <div class="product-img">
-        <img src="swr.webp" alt="SWR Pipes">
-      </div>
-      <div class="product-content">
-        <div class="product-icon-title">
-          <i class="fa-solid fa-pipe"></i>
-          <div>
-            <h3>SWR Drainage Pipes</h3>
-            <div class="product-tagline">Ring-fit drainage solutions</div>
+      <div class="card">
+        <div class="card-slideshow">
+          <div class="card-slide active">
+            <img src="watertank.jpg" alt="Astral tank 1">
+          </div>
+          <div class="card-slide">
+            <img src="watertank1.jpg" alt="Astral tank 2">
+          </div>
+          <div class="card-slide">
+            <img src="watertank2.jpg" alt="Astral tank 3">
           </div>
         </div>
-        <p>Reliable SWR pipe systems for drainage and sewerage lines, with ring-fit joints for long-term performance.</p>
-        <div class="product-meta">
-          <span class="badge">Preferred by Contractors</span>
-          <span class="meta-link">View details <i class="fa-solid fa-arrow-right"></i></span>
-        </div>
+        <i class="fa-solid fa-water card-icon"></i>
+        <h3>Astral Water Tanks</h3>
+        <p>Multi-layer potable water tanks engineered for strong, long-lasting water storage.</p>
+        <button class="view-btn">View</button>
       </div>
-    </a>
 
-    <!-- Tanks -->
-    <a href="tanks.html" class="product-card"
-       data-name="water tank"
-       data-text="astral triple layer water storage tank 500l 1000l">
-      <div class="product-img">
-        <img src="watertank.jpg" alt="Water Tanks">
-      </div>
-      <div class="product-content">
-        <div class="product-icon-title">
-          <i class="fa-solid fa-water"></i>
-          <div>
-            <h3>Water Storage Tanks</h3>
-            <div class="product-tagline">Multi-layer water tanks</div>
+      <div class="card">
+        <div class="card-slideshow">
+          <div class="card-slide active">
+            <img src="one_piece_toilet.png" alt="Astral bathware 1">
+          </div>
+          <div class="card-slide">
+            <img src="unirals.png" alt="Astral bathware 2">
+          </div>
+          <div class="card-slide">
+            <img src="tabletopbesin.png" alt="Astral bathware 3">
           </div>
         </div>
-        <p>UV-stabilized, food-grade storage tanks in multiple capacities for homes, apartments and commercial properties.</p>
-        <div class="product-meta">
-          <span class="badge">500L – 5000L</span>
-          <span class="meta-link">View details <i class="fa-solid fa-arrow-right"></i></span>
-        </div>
+        <i class="fa-solid fa-bath card-icon"></i>
+        <h3>Astral Bathware</h3>
+        <p>Sanitaryware and bathware pieces designed to match modern bathroom aesthetics.</p>
+        <button class="view-btn">View</button>
       </div>
-    </a>
 
-    <!-- Sanitaryware -->
-    <a href="sanitaryware.html" class="product-card"
-       data-name="sanitaryware basins toilets"
-       data-text="western indian toilet wash basin urinal">
-      <div class="product-img">
-        <img src="sanitary.jpg" alt="Sanitaryware">
-      </div>
-      <div class="product-content">
-        <div class="product-icon-title">
-          <i class="fa-solid fa-toilet"></i>
-          <div>
-            <h3>Sanitaryware Collection</h3>
-            <div class="product-tagline">Basins, WCs & urinals</div>
+      <div class="card">
+        <div class="card-slideshow">
+          <div class="card-slide active">
+            <img src="bathroom.jpg" alt="Astral fittings 1">
+          </div>
+          <div class="card-slide">
+            <img src="bathroom1.jpg" alt="Astral fittings 2">
+          </div>
+          <div class="card-slide">
+            <img src="bathroom2.jpg" alt="Astral fittings 3">
           </div>
         </div>
-        <p>Western and Indian toilets, wash basins and urinals in various designs, sizes and finishes.</p>
-        <div class="product-meta">
-          <span class="badge">Multiple Brands</span>
-          <span class="meta-link">View details <i class="fa-solid fa-arrow-right"></i></span>
-        </div>
+        <i class="fa-solid fa-faucet-drip card-icon"></i>
+        <h3>Astral Bathroom Fittings</h3>
+        <p>Faucets, shower fittings and allied bathroom hardware to complete Astral plumbing systems.</p>
+        <button class="view-btn">View</button>
       </div>
-    </a>
+    </div>
+  </section>
 
-    <!-- Fittings -->
-    <a href="fittings.html" class="product-card"
-       data-name="bathroom fittings"
-       data-text="taps showers mixer angle cock accessories">
-      <div class="product-img">
-        <img src="fittings.jpg" alt="Bathroom Fittings">
-      </div>
-      <div class="product-content">
-        <div class="product-icon-title">
-          <i class="fa-solid fa-shower"></i>
-          <div>
-            <h3>Bathroom Fittings</h3>
-            <div class="product-tagline">Taps, showers & mixers</div>
+  <!-- WATERTEC BRAND BLOCK -->
+  <section class="brand-block" id="watertec">
+    <div class="brand-title">
+      <i class="fa-solid fa-droplet" style="color:#0b3c5d;font-size:1.4rem;"></i>
+      <h2>Watertec</h2>
+      <span>Polymer Bathware Range</span>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-slideshow">
+          <div class="card-slide active">
+            <img src="polymer.jpg" alt="Watertec 1">
+          </div>
+          <div class="card-slide">
+            <img src="polymer1.jpg" alt="Watertec 2">
+          </div>
+          <div class="card-slide">
+            <img src="polymer2.jpg" alt="Watertec 3">
           </div>
         </div>
-        <p>Modern and durable bathroom fittings including taps, showers, mixers and accessories.</p>
-        <div class="product-meta">
-          <span class="badge">Economy to Premium</span>
-          <span class="meta-link">View details <i class="fa-solid fa-arrow-right"></i></span>
-        </div>
+        <i class="fa-solid fa-shower card-icon"></i>
+        <h3>Polymer Bathware</h3>
+        <p>Durable polymer bathware including taps, health faucets and bathroom accessories designed for everyday use.</p>
+        <button class="view-btn">View</button>
       </div>
-    </a>
+    </div>
+  </section>
 
-    <!-- Paints -->
-    <a href="nerolac.html" class="product-card"
-       data-name="nerolac paint"
-       data-text="interior exterior paint primer putty">
-      <div class="product-img">
-        <img src="paint.jpg" alt="Nerolac Paints">
-      </div>
-      <div class="product-content">
-        <div class="product-icon-title">
-          <i class="fa-solid fa-paint-roller"></i>
-          <div>
-            <h3>Nerolac Paints</h3>
-            <div class="product-tagline">Interior & exterior finishes</div>
+  <!-- NEROLAC BRAND BLOCK -->
+  <section class="brand-block" id="nerolac">
+    <div class="brand-title">
+      <i class="fa-solid fa-paint-roller" style="color:#0b3c5d;font-size:1.4rem;"></i>
+      <h2>Nerolac</h2>
+      <span>Paints · Primers · Putty</span>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-slideshow">
+          <div class="card-slide active">
+            <img src="ni1.jpg" alt="Interior paint 1">
+          </div>
+          <div class="card-slide">
+            <img src="ni2.jpg" alt="Interior paint 2">
+          </div>
+          <div class="card-slide">
+            <img src="ni3.jpg" alt="Interior paint 3">
           </div>
         </div>
-        <p>Nerolac paints, primers and putty with shade cards for interior and exterior applications.</p>
-        <div class="product-meta">
-          <span class="badge">Genuine Products</span>
-          <span class="meta-link">View details <i class="fa-solid fa-arrow-right"></i></span>
-        </div>
+        <i class="fa-solid fa-brush card-icon"></i>
+        <h3>Interior Emulsions</h3>
+        <p>Smooth-finish, washable interior paints for living spaces, bedrooms and halls.</p>
+        <button class="view-btn">View</button>
       </div>
-    </a>
 
-  </div>
-</section>
+      <div class="card">
+        <div class="card-slideshow">
+          <div class="card-slide active">
+            <img src="ne1.jpg" alt="Exterior paint 1">
+          </div>
+          <div class="card-slide">
+            <img src="ne2.jpg" alt="Exterior paint 2">
+          </div>
+          <div class="card-slide">
+            <img src="ne3.jpg" alt="Exterior paint 3">
+          </div>
+        </div>
+        <i class="fa-solid fa-city card-icon"></i>
+        <h3>Exterior Emulsions</h3>
+        <p>Weather-resistant coatings that protect exterior walls from sunlight and rain.</p>
+        <button class="view-btn">View</button>
+      </div>
 
-<!-- BRAND STRIP -->
-<div class="brand-strip">
-  <h2>Trusted Brands We Deal In</h2>
-  <p>Raj Sanitary is an Authorized Astral Dealer and also offers genuine Nerolac paints along with other carefully selected brands for quality and durability.</p>
-  <div class="brand-logos">
-    <img src="astral.logo.jpg" alt="Astral">
-    <img src="nerolac.png" alt="Nerolac">
-  </div>
-</div>
+      <div class="card">
+        <div class="card-slideshow">
+          <div class="card-slide active">
+            <img src="https://via.placeholder.com/400x200?text=Primer+1" alt="Primer & putty 1">
+          </div>
+          <div class="card-slide">
+            <img src="https://via.placeholder.com/400x200?text=Primer+2" alt="Primer & putty 2">
+          </div>
+          <div class="card-slide">
+            <img src="https://via.placeholder.com/400x200?text=Primer+3" alt="Primer & putty 3">
+          </div>
+        </div>
+        <i class="fa-solid fa-fill-drip card-icon"></i>
+        <h3>Primers & Putty</h3>
+        <p>Surface preparation products for better adhesion and a smoother, long-lasting finish.</p>
+        <button class="view-btn">View</button>
+      </div>
 
-<!-- CTA -->
-<div class="cta">
-  <h2>Not Sure Which Product Is Right?</h2>
-  <p>Share your requirement, water source and budget with Raj Sanitary. The team will suggest the best combination of pipes, tanks, fittings, sanitaryware and paints for your project.</p>
-  <a href="contact.html">Talk to Us</a>
-</div>
+      <div class="card">
+        <div class="card-slideshow">
+          <div class="card-slide active">
+            <img src="nw1.jpg" alt="Shade range 1">
+          </div>
+          <div class="card-slide">
+            <img src="nw2.jpg" alt="Shade range 2">
+          </div>
+          <div class="card-slide">
+            <img src="ns1.jpg" alt="Shade range 3">
+          </div>
+        </div>
+        <i class="fa-solid fa-palette card-icon"></i>
+        <h3>Shade Range</h3>
+        <p>Wide color options with guidance to match interiors, exteriors and décor themes.</p>
+        <button class="view-btn">View</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER PRODUCTS -->
+  <section class="brand-block" id="other-products">
+    <div class="brand-title">
+      <i class="fa-solid fa-layer-group" style="color:#0b3c5d;font-size:1.4rem;"></i>
+      <h2>Other Products</h2>
+      <span>Chambers & Bathroom Accessories</span>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-slideshow">
+          <div class="card-slide active">
+            <img src="https://via.placeholder.com/400x200?text=Chambers+1" alt="Chambers 1">
+          </div>
+          <div class="card-slide">
+            <img src="https://via.placeholder.com/400x200?text=Chambers+2" alt="Chambers 2">
+          </div>
+          <div class="card-slide">
+            <img src="https://via.placeholder.com/400x200?text=Chambers+3" alt="Chambers 3">
+          </div>
+        </div>
+        <i class="fa-solid fa-border-all card-icon"></i>
+        <h3>Chambers</h3>
+        <p>Readymade inspection and drainage chambers that provide access to underground pipelines for cleaning and maintenance.</p>
+        <button class="view-btn">View</button>
+      </div>
+
+      <div class="card">
+        <div class="card-slideshow">
+          <div class="card-slide active">
+            <img src="https://via.placeholder.com/400x200?text=Accessories+1" alt="Accessories 1">
+          </div>
+          <div class="card-slide">
+            <img src="https://via.placeholder.com/400x200?text=Accessories+2" alt="Accessories 2">
+          </div>
+          <div class="card-slide">
+            <img src="https://via.placeholder.com/400x200?text=Accessories+3" alt="Accessories 3">
+          </div>
+        </div>
+        <i class="fa-solid fa-toilet-paper card-icon"></i>
+        <h3>Bathroom Accessories</h3>
+        <p>Towel rods, robe hooks, soap dishes, shelves, mirrors and other accessories to complete modern bathrooms in a coordinated look.</p>
+        <button class="view-btn">View</button>
+      </div>
+    </div>
+  </section>
+</main>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-container">
     <div>
-      <img src="logo.png" style="width:50px" alt="Raj Sanitary">
+      <img alt="Raj Sanitary Logo" src="logo.png" style="width:50px;height:50px;">
       <p>Premium Sanitary & Hardware Store in Rewa</p>
     </div>
     <div>
@@ -601,98 +535,33 @@ section h2{
     <div>
       <h3>Contact</h3>
       <p>📞 7000903314</p>
-      <p>📍 Near Saman Tiraha, Rewa</p>
+      <p>📍 Near Saman Tiraha, Shop No. 12, Shilpi Kung, Rewa</p>
     </div>
   </div>
   <div class="footer-bottom">
-    © 2026 Raj Sanitary. All Rights Reserved.
+    © <span id="year"></span> Raj Sanitary. All Rights Reserved.
   </div>
 </footer>
 
 <script>
-// simple search filter
-const input = document.getElementById('searchInput');
-const btn = document.getElementById('searchBtn');
-const cards = document.querySelectorAll('.product-card');
+document.getElementById("year").textContent = new Date().getFullYear();
 
-function doSearch(){
-  const q = input.value.toLowerCase().trim();
-  cards.forEach(card => {
-    const name = card.dataset.name.toLowerCase();
-    const text = card.dataset.text.toLowerCase();
-    if(!q || name.includes(q) || text.includes(q)){
-      card.style.display = 'flex';
-    } else {
-      card.style.display = 'none';
-    }
+/* simple slideshow for each card */
+function initCardSlideshows(){
+  const slideshows = document.querySelectorAll('.card-slideshow');
+  slideshows.forEach(slideshow => {
+    const slides = slideshow.querySelectorAll('.card-slide');
+    let index = 0;
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 2500);
   });
 }
 
-btn.addEventListener('click', doSearch);
-input.addEventListener('keyup', e => {
-  if(e.key === 'Enter') doSearch();
-  if(!input.value.trim()) doSearch();
-});
-
-// initial show all
-doSearch();
+document.addEventListener('DOMContentLoaded', initCardSlideshows);
 </script>
-
-</body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Products | Raj Sanitary</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="bg-white">
-
-<!-- HEADER -->
-<header class="bg-white shadow p-4 flex justify-between items-center">
-  <h1 class="text-xl font-bold text-red-700">RAJ SANITARY</h1>
-  <nav class="flex gap-4">
-    <a href="index.html">Home</a>
-    <a href="products.html" class="text-red-700">Products</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<!-- PRODUCTS -->
-<section class="p-10 max-w-7xl mx-auto">
-  <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Our Products</h2>
-
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="border rounded p-5 shadow">
-      <h3 class="font-bold text-lg">Sanitaryware</h3>
-      <p>Wash basins, WC, sinks</p>
-    </div>
-    <div class="border rounded p-5 shadow">
-      <h3 class="font-bold text-lg">Bathroom Fittings</h3>
-      <p>Taps, showers, mixers</p>
-    </div>
-    <div class="border rounded p-5 shadow">
-      <h3 class="font-bold text-lg">Pipes & Plumbing</h3>
-      <p>PVC, CPVC, HDPE pipes</p>
-    </div>
-    <div class="border rounded p-5 shadow">
-      <h3 class="font-bold text-lg">Tiles</h3>
-      <p>Floor & wall tiles</p>
-    </div>
-    <div class="border rounded p-5 shadow">
-      <h3 class="font-bold text-lg">Hardware Accessories</h3>
-      <p>Valves, tools, fittings</p>
-    </div>
-  </div>
-</section>
-
-<footer class="bg-red-800 text-white text-center p-5">
-  © 2026 Raj Sanitary
-</footer>
 
 </body>
 </html>
