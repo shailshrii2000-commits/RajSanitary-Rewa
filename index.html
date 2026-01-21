@@ -89,8 +89,6 @@ nav a:hover{
   text-align:center;
   padding:20px;
   color:#f9fafb;
-
-  /* choose one good showroom image here */
   background-image:url('showroom.jpg');
   background-size:cover;
   background-position:center;
@@ -422,6 +420,77 @@ section{
   font-size:.8rem;
 }
 
+/* FLOATING ACTIONS */
+.floating-actions{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  z-index:9999;
+}
+.floating-btn{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  border:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#ffffff;
+  cursor:pointer;
+  box-shadow:0 8px 16px rgba(15,23,42,0.35);
+  transition:.2s ease-in-out;
+}
+.floating-btn.whatsapp{
+  background:#22c55e;
+}
+.floating-btn.whatsapp:hover{
+  background:#16a34a;
+}
+.floating-btn.phone{
+  background:#0b3c5d;
+}
+.floating-btn.phone:hover{
+  background:#06253a;
+}
+
+/* POPUP AS BOTTOM FOOTER BAR */
+.site-popup-msg{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  background:#111827;
+  color:#f9fafb;
+  padding:8px 16px;
+  font-size:.8rem;
+  box-shadow:0 -4px 10px rgba(15,23,42,0.45);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .3s ease, transform .3s ease;
+  z-index:9998;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  transform:translateY(100%);
+}
+.site-popup-msg.show{
+  opacity:1;
+  transform:translateY(0);
+}
+.site-popup-msg i{
+  color:#facc15;
+}
+@media(max-width:600px){
+  .site-popup-msg{
+    font-size:.78rem;
+    padding:8px 10px;
+  }
+}
+
 /* RESPONSIVE */
 @media(max-width:900px){
   header{
@@ -441,7 +510,7 @@ section{
   .hero{
     min-height:70vh;
     padding:30px 16px;
-    background-attachment:scroll; /* better on some mobiles */
+    background-attachment:scroll;
   }
   .hero-content h1{
     font-size:2rem;
@@ -476,24 +545,21 @@ section{
   </nav>
 </header>
 
-<!-- HERO FIXED BACKGROUND -->
+<!-- HERO -->
 <div class="hero">
   <div class="hero-content">
     <div class="hero-inner">
 
-      <!-- Logo (optional) -->
       <div style="margin-bottom:16px;">
         <img src="watertec-logo.png" alt="Watertec Logo" style="width:110px;height:auto;">
       </div>
 
-      <!-- Heading + punchline (edit text here) -->
       <h1>World of Bath & Plumbing at Raj Sanitary</h1>
       <p>
         Upgrade your bathroom and plumbing with trusted brands like Astral, Watertec and Nerolac under one roof. 
-        Get genuine products, practical guidance and complete solutions for homes and projects in Rewa.[web:136][web:132]
+        Get genuine products, practical guidance and complete solutions for homes and projects in Rewa.
       </p>
 
-      <!-- Stats -->
       <div class="hero-stats">
         <div class="hero-stat-item">
           <div class="number">25<span>+</span></div>
@@ -513,7 +579,6 @@ section{
         </div>
       </div>
 
-      <!-- CTA buttons -->
       <div class="hero-cta">
         <a href="tel:7000903314" class="btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a>
         <a href="products.html" class="btn-ghost">View All Products</a>
@@ -535,7 +600,7 @@ section{
       <i class="fa-solid fa-toilet"></i>
       <h3>Sanitaryware</h3>
       <p>
-        Basins, Western & Indian toilets, sinks, urinals and complete ceramic sanitaryware that balance hygiene with modern design.[web:125]
+        Basins, Western & Indian toilets, sinks, urinals and complete ceramic sanitaryware that balance hygiene with modern design.
       </p>
     </div>
 
@@ -543,7 +608,7 @@ section{
       <i class="fa-solid fa-shower"></i>
       <h3>Bathroom Fittings</h3>
       <p>
-        Taps, showers, mixer sets, angle valves and accessories that combine smooth performance with elegant finish.[web:117][web:130]
+        Taps, showers, mixer sets, angle valves and accessories that combine smooth performance with elegant finish.
       </p>
     </div>
 
@@ -551,7 +616,7 @@ section{
       <i class="fa-solid fa-pipe"></i>
       <h3>Pipes & Plumbing</h3>
       <p>
-        PVC, CPVC and UPVC pipes with fittings for reliable water supply and drainage in residential and commercial projects.[web:118]
+        PVC, CPVC and UPVC pipes with fittings for reliable water supply and drainage in residential and commercial projects.
       </p>
     </div>
 
@@ -559,7 +624,7 @@ section{
       <i class="fa-solid fa-paint-roller"></i>
       <h3>Nerolac Paints</h3>
       <p>
-        Interior & exterior Nerolac paints, primers and putty with a wide shade range and durable finish for every wall.[web:75][web:78]
+        Interior & exterior Nerolac paints, primers and putty with a wide shade range and durable finish for every wall.
       </p>
     </div>
   </div>
@@ -573,8 +638,8 @@ section{
       <h2>Authorized ASTRAL Distributor</h2>
     </div>
     <p>
-      Raj Sanitary supplies genuine ASTRAL products including CPVC plumbing systems, SWR ring-fit pipes, underground drainage solutions and multi-layer water storage tanks.[web:12][web:115]
-      Astral systems are engineered for long service life, leak-proof performance and safe water storage, making them a preferred choice for modern construction.[web:12]
+      Raj Sanitary supplies genuine ASTRAL products including CPVC plumbing systems, SWR ring-fit pipes, underground drainage solutions and multi-layer water storage tanks.
+      Astral systems are engineered for long service life, leak-proof performance and safe water storage, making them a preferred choice for modern construction.
     </p>
   </div>
 </section>
@@ -628,7 +693,7 @@ section{
 
     <div class="about-like-text">
       <p>
-        Raj Sanitary is a trusted sanitary and hardware store in Rewa with years of experience serving homeowners, builders and contractors. The showroom brings together premium sanitaryware, modern fittings, reliable plumbing systems and Nerolac paints in one place.[web:82][web:84]
+        Raj Sanitary is a trusted sanitary and hardware store in Rewa with years of experience serving homeowners, builders and contractors. The showroom brings together premium sanitaryware, modern fittings, reliable plumbing systems and Nerolac paints in one place.
       </p>
       <p>
         The team focuses on genuine brands, proper guidance and transparent pricing so every bathroom, kitchen and building project gets products that perform well and look good for years.
@@ -647,10 +712,10 @@ section{
     <h2>Why Choose Raj Sanitary</h2>
   </div>
   <ul>
-    <li>✔ Curated range of sanitaryware, fittings, plumbing and paints for complete solutions.[web:132]</li>
-    <li>✔ Genuine Astral, Watertec and Nerolac products with brand-backed quality.[web:12][web:115][web:136][web:75][web:78]</li>
-    <li>✔ Trusted by local homeowners, builders and contractors in Rewa.[web:89]</li>
-    <li>✔ Practical product suggestions based on budget and site conditions.[web:96]</li>
+    <li>✔ Curated range of sanitaryware, fittings, plumbing and paints for complete solutions.</li>
+    <li>✔ Genuine Astral, Watertec and Nerolac products with brand-backed quality.</li>
+    <li>✔ Trusted by local homeowners, builders and contractors in Rewa.</li>
+    <li>✔ Practical product suggestions based on budget and site conditions.</li>
     <li>✔ Convenient location near Saman Tiraha with friendly, helpful staff.</li>
   </ul>
 </section>
@@ -688,6 +753,21 @@ section{
   </div>
 </footer>
 
+<!-- FLOATING WHATSAPP + PHONE + POPUP -->
+<div class="floating-actions">
+  <button class="floating-btn whatsapp" id="fabWhatsapp" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp" style="font-size:1.5rem;"></i>
+  </button>
+  <button class="floating-btn phone" id="fabPhone" aria-label="Call Raj Sanitary">
+    <i class="fa-solid fa-phone" style="font-size:1.2rem;"></i>
+  </button>
+</div>
+
+<div class="site-popup-msg" id="sitePopupMsg">
+  <i class="fa-solid fa-check-circle"></i>
+  <span>Trusted, experienced and expert plumbers, painters, building contractors, engineers</span>
+</div>
+
 <script>
 function miniSlider(cls){
   const imgs = document.querySelectorAll(cls + " img");
@@ -705,6 +785,69 @@ miniSlider(".tank-mini");
 miniSlider(".bath-mini");
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// floating actions
+const whatsappNumber = "917000903314";
+const phoneNumber = "7000903314";
+
+document.getElementById('fabWhatsapp').addEventListener('click', function(){
+  const url = "https://wa.me/" + whatsappNumber + "?text=" +
+    encodeURIComponent("Hello Raj Sanitary, I am visiting your website and need some help.");
+  window.open(url, "_blank");
+});
+
+document.getElementById('fabPhone').addEventListener('click', function(){
+  window.location.href = "tel:" + phoneNumber;
+});
+
+// popup loop with pause on hover
+const popupEl = document.getElementById('sitePopupMsg');
+let popupInterval = null;
+let popupTimeout = null;
+let popupPaused = false;
+
+function showPopupOnce(){
+  if(popupPaused) return;
+  popupEl.classList.add('show');
+  popupTimeout = setTimeout(() => {
+    popupEl.classList.remove('show');
+  }, 2000);
+}
+
+function startPopupLoop(){
+  if(popupInterval) return;
+  // first show after 1s
+  setTimeout(showPopupOnce, 1000);
+  // then every 3s
+  popupInterval = setInterval(showPopupOnce, 5000);
+}
+
+function stopPopupLoop(){
+  if(popupInterval){
+    clearInterval(popupInterval);
+    popupInterval = null;
+  }
+  if(popupTimeout){
+    clearTimeout(popupTimeout);
+    popupTimeout = null;
+  }
+}
+
+// pause on hover
+popupEl.addEventListener('mouseenter', () => {
+  popupPaused = true;
+  popupEl.classList.add('show'); // keep visible while hovered
+  stopPopupLoop();
+});
+
+popupEl.addEventListener('mouseleave', () => {
+  popupPaused = false;
+  popupEl.classList.remove('show');
+  startPopupLoop();
+});
+
+// start loop on page load
+startPopupLoop();
 </script>
 
 </body>

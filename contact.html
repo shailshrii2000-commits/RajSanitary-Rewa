@@ -1,230 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Contact – Raj Sanitary</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root{
-      --primary:#0056a8;   /* Astral-type blue */
-      --primary-dark:#003f7a;
-      --accent:#ffd200;    /* Astral yellow */
-      --bg:#f3f6fb;
-      --text:#222;
-    }
-    *{box-sizing:border-box;}
-    body{
-      font-family: Arial, sans-serif;
-      margin:0;
-      padding:0;
-      background:var(--bg);
-      color:var(--text);
-    }
-    .container{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 20px 15px 40px;
-    }
-    .card{
-      background:#fff;
-      border-radius:8px;
-      box-shadow:0 3px 12px rgba(0,0,0,0.08);
-      padding:20px;
-    }
-    h1{
-      margin:0 0 10px;
-      font-size:26px;
-      color:var(--primary);
-    }
-    h2{
-      margin-top:0;
-      font-size:20px;
-      color:var(--primary-dark);
-    }
-    .tagline{
-      display:inline-block;
-      background:var(--primary);
-      color:#fff;
-      padding:4px 10px;
-      border-radius:999px;
-      font-size:13px;
-      margin:8px 0 16px;
-    }
-    .info p{
-      margin:4px 0;
-      font-size:14px;
-    }
-    .row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:24px;
-      margin-top:20px;
-    }
-    .col{
-      flex:1 1 300px;
-      min-width:0;
-    }
-    label{
-      display:block;
-      margin-bottom:4px;
-      font-size:13px;
-      font-weight:600;
-    }
-    input, select, textarea{
-      width:100%;
-      padding:8px 10px;
-      margin-bottom:12px;
-      border:1px solid #cfd6e4;
-      border-radius:4px;
-      font-size:14px;
-    }
-    input:focus, select:focus, textarea:focus{
-      outline:none;
-      border-color:var(--primary);
-      box-shadow:0 0 0 2px rgba(0,86,168,0.15);
-    }
-    button{
-      background:var(--primary);
-      color:#fff;
-      border:none;
-      padding:10px 22px;
-      border-radius:4px;
-      cursor:pointer;
-      font-size:14px;
-      font-weight:600;
-      letter-spacing:.3px;
-      text-transform:uppercase;
-    }
-    button:hover{
-      background:var(--primary-dark);
-    }
-    .note{
-      font-size:12px;
-      color:#666;
-      margin-top:6px;
-    }
-    .map{
-      margin-top:6px;
-      border-radius:6px;
-      overflow:hidden;
-      border:1px solid #dde3f0;
-    }
-    a{
-      color:var(--primary);
-      text-decoration:none;
-    }
-    a:hover{
-      text-decoration:underline;
-    }
-    /* Floating WhatsApp */
-    .whatsapp-float{
-      position:fixed;
-      width:56px;
-      height:56px;
-      bottom:18px;
-      right:18px;
-      background:#25d366;
-      color:#fff;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:30px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.25);
-      z-index:100;
-    }
-    .whatsapp-float:hover{
-      background:#1ebe5a;
-    }
-    @media (max-width:640px){
-      .card{border-radius:0; box-shadow:none;}
-      .row{gap:16px;}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Raj Sanitary Rewa | Astral & Nerolac Dealer</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+body{
+  background:#f3f4f6;
+  color:#111827;
+}
+
+/* TOP CONTACT STRIP */
+.top-strip{
+  background:#fef3c7;
+  color:#92400e;
+  font-size:.9rem;
+  padding:6px 40px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  align-items:center;
+}
+.top-strip a{
+  color:#92400e;
+  text-decoration:none;
+  font-weight:600;
+}
+.top-strip i{
+  margin-right:6px;
+}
+
+/* HEADER */
+header{
+  background:#0b3c5d;
+  padding:14px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:50;
+  box-shadow:0 6px 18px rgba(15,23,42,0.35);
+}
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.logo-container img{
+  height:52px;
+  width:auto;
+  object-fit:contain;
+}
+.logo-container span{
+  font-size:1.5rem;
+  font-weight:700;
+  letter-spacing:.04em;
+}
+nav a{
+  color:#e5e7eb;
+  margin-left:22px;
+  text-decoration:none;
+  font-weight:500;
+  font-size:.94rem;
+}
+nav a:hover{
+  color:#ffcc00;
+}
+
+/* PAGE HEADER STRIP */
+.page-hero{
+  padding:40px 20px 26px;
+  text-align:center;
+  background:linear-gradient(135deg,#0b3c5d,#1f2933);
+  color:#f9fafb;
+  box-shadow:0 12px 30px rgba(15,23,42,0.45);
+}
+.page-hero h1{
+  font-size:2.1rem;
+  margin-bottom:6px;
+}
+.page-hero p{
+  font-size:.98rem;
+  color:#e5e7eb;
+}
+
+/* MAIN LAYOUT */
+.contact-wrapper{
+  max-width:1200px;
+  margin:40px auto 50px;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:1.3fr 1.2fr;
+  gap:30px;
+}
+
+/* CONTACT CARD */
+.contact-card{
+  background:#ffffff;
+  border-radius:18px;
+  padding:26px 22px;
+  box-shadow:0 14px 36px rgba(15,23,42,0.12);
+}
+.contact-card h2{
+  font-size:1.5rem;
+  color:#0b3c5d;
+  margin-bottom:10px;
+}
+.contact-card p{
+  font-size:.93rem;
+  color:#4b5563;
+  margin-bottom:16px;
+}
+
+/* CONTACT DETAILS */
+.contact-details{
+  margin-top:10px;
+}
+.detail-row{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  margin-bottom:14px;
+  font-size:.93rem;
+  color:#111827;
+}
+.detail-row i{
+  font-size:1.1rem;
+  color:#0b3c5d;
+  margin-top:2px;
+}
+.detail-label{
+  font-weight:600;
+}
+.detail-text a{
+  color:#0b3c5d;
+  text-decoration:none;
+  font-weight:500;
+}
+.detail-text a:hover{
+  text-decoration:underline;
+}
+
+/* QUICK ACTION BUTTONS */
+.quick-actions{
+  margin-top:18px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.quick-actions a{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 18px;
+  border-radius:999px;
+  font-size:.9rem;
+  text-decoration:none;
+  font-weight:600;
+}
+.btn-call{
+  background:#16a34a;
+  color:#f9fafb;
+}
+.btn-whatsapp{
+  background:#22c55e;
+  color:#f9fafb;
+}
+.quick-actions a i{
+  font-size:1rem;
+}
+
+/* CONTACT FORM */
+.contact-form{
+  margin-top:16px;
+}
+.contact-form h3{
+  font-size:1.1rem;
+  color:#0b3c5d;
+  margin-bottom:12px;
+}
+.form-row{
+  display:flex;
+  gap:14px;
+}
+.form-group{
+  margin-bottom:12px;
+  flex:1;
+}
+label{
+  display:block;
+  font-size:.83rem;
+  margin-bottom:4px;
+  color:#374151;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+  width:100%;
+  padding:9px 10px;
+  border-radius:10px;
+  border:1px solid #d1d5db;
+  font-size:.9rem;
+  outline:none;
+  transition:border-color .2s, box-shadow .2s;
+  background:#f9fafb;
+}
+input:focus,
+textarea:focus{
+  border-color:#0b3c5d;
+  box-shadow:0 0 0 2px rgba(37,99,235,0.18);
+  background:#ffffff;
+}
+textarea{
+  min-height:110px;
+  resize:vertical;
+}
+button[type="submit"]{
+  margin-top:6px;
+  padding:10px 22px;
+  border-radius:999px;
+  border:none;
+  background:#0b3c5d;
+  color:#f9fafb;
+  font-size:.92rem;
+  font-weight:600;
+  cursor:pointer;
+}
+button[type="submit"]:hover{
+  background:#08293e;
+}
+
+/* MAP SIDE */
+.map-card{
+  background:#ffffff;
+  border-radius:18px;
+  padding:22px 20px 20px;
+  box-shadow:0 14px 36px rgba(15,23,42,0.12);
+}
+.map-card h2{
+  font-size:1.4rem;
+  color:#0b3c5d;
+  margin-bottom:8px;
+}
+.map-card p{
+  font-size:.9rem;
+  color:#4b5563;
+  margin-bottom:12px;
+}
+.map-embed{
+  width:100%;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 26px rgba(15,23,42,0.22);
+}
+.map-embed iframe{
+  width:100%;
+  height:320px;
+  border:0;
+}
+
+/* SMALL INFO STRIP UNDER MAP */
+.map-note{
+  margin-top:10px;
+  font-size:.83rem;
+  color:#6b7280;
+}
+
+/* FOOTER */
+.footer{
+  background:#111827;
+  color:#9ca3af;
+  padding:46px 20px 20px;
+}
+.footer-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:26px;
+}
+.footer h3{
+  color:#facc15;
+  margin-bottom:6px;
+  font-size:1rem;
+}
+.footer a{
+  color:#d1d5db;
+  text-decoration:none;
+  font-size:.9rem;
+}
+.footer a:hover{
+  color:#facc15;
+}
+.footer p{
+  font-size:.9rem;
+}
+.footer-bottom{
+  text-align:center;
+  margin-top:22px;
+  border-top:1px solid #4b5563;
+  padding-top:10px;
+  font-size:.8rem;
+}
+
+/* FLOATING CALL BUTTON */
+.call-float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:20px;
+  right:20px;
+  background:#0b3c5d;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 18px rgba(0,0,0,0.3);
+  z-index:80;
+  text-decoration:none;
+}
+.call-float i{
+  font-size:1.4rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  header{
+    padding:10px 18px;
+  }
+  .top-strip{
+    padding:6px 14px;
+    text-align:center;
+  }
+  .contact-wrapper{
+    grid-template-columns:1fr;
+    margin:26px auto 40px;
+  }
+}
+</style>
 </head>
+
 <body>
 
-<div class="container">
-  <div class="card">
-    <h1>Contact Us</h1>
-    <span class="tagline">Raj Sanitary – Authorised Astral Pipes Dealer</span>
+<!-- TOP CONTACT STRIP -->
+<div class="top-strip">
+  <span><i class="fa-solid fa-phone"></i><a href="tel:7000903314">7000903314</a></span>
+  <span><i class="fa-solid fa-location-dot"></i>Near Saman Tiraha, Shop No. 12, Shilpi Kung, Rewa</span>
+</div>
 
-    <div class="info">
-      <p><strong>Address:</strong><br>
-        [Shop/House No.], [Street/Area],<br>
-        Rewa – 486001, Madhya Pradesh, India
-      </p>
-      <p><strong>Phone / WhatsApp:</strong>
-        <a href="tel:+917000903314">+91-7000903314</a> |
-        <a href="https://wa.me/917000903314" target="_blank">Chat on WhatsApp</a>
-      </p>
-      <p><strong>Email:</strong>
-        <a href="mailto:youremail@example.com">youremail@example.com</a>
-      </p>
-      <p><strong>Working Hours:</strong><br>
-        Mon – Sat: 10:00 AM – 7:00 PM, Sunday Closed
-      </p>
-    </div>
+<!-- HEADER -->
+<header>
+  <div class="logo-container">
+    <img src="logo.png" alt="Raj Sanitary Logo">
+    <span>RAJ SANITARY</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="catalog.html">Catalog & Pricelist</a>
+  </nav>
+</header>
 
-    <div class="row">
-      <!-- Enquiry form -->
-      <div class="col">
-        <h2>Send an Enquiry</h2>
-        <form action="#" method="post">
-          <label for="name">Name *</label>
-          <input type="text" id="name" name="name" required>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <h1>Contact Raj Sanitary</h1>
+  <p>Get in touch for Astral pipes, sanitaryware, bathroom fittings and Nerolac paints in Rewa.</p>
+</section>
 
-          <label for="mobile">Mobile Number *</label>
-          <input type="tel" id="mobile" name="mobile" required>
+<!-- MAIN CONTACT WRAPPER -->
+<div class="contact-wrapper">
 
-          <label for="city">City / Area</label>
-          <input type="text" id="city" name="city">
+  <!-- LEFT: CONTACT & FORM -->
+  <div class="contact-card">
+    <h2>Showroom Details</h2>
+    <p>Visit or call Raj Sanitary for quotations, product availability and guidance for your bathroom and plumbing projects.</p>
 
-          <label for="type">Requirement Type</label>
-          <select id="type" name="type">
-            <option value="">Select</option>
-            <option value="plumbing">Plumbing (CPVC / uPVC)</option>
-            <option value="fire">Fire Sprinkler</option>
-            <option value="drainage">Drainage / Sewer</option>
-            <option value="bathware">Bathware</option>
-            <option value="others">Others</option>
-          </select>
-
-          <label for="message">Message *</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-
-          <button type="submit">Send Enquiry</button>
-        </form>
-        <p class="note">
-          We usually respond within 24 hours on working days.
-        </p>
+    <div class="contact-details">
+      <div class="detail-row">
+        <i class="fa-solid fa-location-dot"></i>
+        <div class="detail-text">
+          <div class="detail-label">Address</div>
+          <div>Near Saman Tiraha, Shop No. 12, Shilpi Kung, Rewa, Madhya Pradesh 486001</div>
+        </div>
       </div>
 
-      <!-- Map -->
-      <div class="col">
-        <h2>Find Us on Map</h2>
-        <div class="map">
-          <!-- Replace src with your actual Google Maps embed link -->
-          <iframe
-            src="https://www.google.com/maps/embed?pb="
-            width="100%"
-            height="280"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+      <div class="detail-row">
+        <i class="fa-solid fa-phone"></i>
+        <div class="detail-text">
+          <div class="detail-label">Phone</div>
+          <div><a href="tel:7000903314">7000903314</a></div>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <i class="fa-solid fa-clock"></i>
+        <div class="detail-text">
+          <div class="detail-label">Timings</div>
+          <div>Monday – Sunday: 10:00 AM to 8:00 PM</div>
         </div>
       </div>
     </div>
 
+    <!-- QUICK ACTION BUTTONS -->
+    <div class="quick-actions">
+      <a href="tel:7000903314" class="btn-call">
+        <i class="fa-solid fa-phone"></i> Call Now
+      </a>
+      <a href="https://wa.me/917000903314" class="btn-whatsapp" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+
+    <!-- CONTACT FORM (front-end only) -->
+    <div class="contact-form">
+      <h3>Send a Message</h3>
+      <form action="#" method="post">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="Your mobile number" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email (optional)</label>
+          <input id="email" name="email" type="email" placeholder="your@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message / Requirements</label>
+          <textarea id="message" name="message" placeholder="Share your requirement for pipes, fittings, sanitaryware or paints"></textarea>
+        </div>
+
+        <button type="submit">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- RIGHT: MAP -->
+  <div class="map-card">
+    <h2>Find Us on Map</h2>
+    <p>Raj Sanitary is located close to Saman Tiraha, making it easy to reach from all parts of Rewa city.[web:185]</p>
+
+    <div class="map-embed">
+      <!-- Replace src with your exact Google Maps embed link if needed -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0000000000005!2d81.3000000!3d24.5300000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSaman%20Tiraha%2C%20Rewa!5e0!3m2!1sen!2sin!4v1700000000000"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="map-note">
+      Pin your exact shop name and location on Google Maps, then copy-paste the embed code into the iframe above for accurate directions.[web:182]
+    </div>
   </div>
 </div>
 
-<!-- Floating WhatsApp icon (Raj Sanitary) -->
-<a href="https://wa.me/917000903314" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-  &#128172;
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div>
+      <img alt="Raj Sanitary Logo" src="logo.png" style="width:50px;height:50px;">
+      <p>Premium Sanitary & Hardware Store in Rewa</p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a><br>
+      <a href="products.html">Products</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>📞 7000903314</p>
+      <p>📍 Near Saman Tiraha, Shop No. 12, Shilpi Kung, Rewa</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © <span id="year"></span> Raj Sanitary. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- FLOATING DIRECT CALL BUTTON -->
+<a href="tel:7000903314" class="call-float">
+  <i class="fa-solid fa-phone"></i>
 </a>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>

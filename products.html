@@ -232,7 +232,34 @@ main{
   font-size:.8rem;
 }
 
-/* RESPONSIVE */
+/* BOTTOM POPUP BAR (same style idea as home) */
+.site-popup-msg{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  background:#111827;
+  color:#f9fafb;
+  padding:8px 16px;
+  font-size:.8rem;
+  box-shadow:0 -4px 10px rgba(15,23,42,0.45);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .3s ease, transform .3s ease;
+  z-index:9998;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  transform:translateY(100%);
+}
+.site-popup-msg.show{
+  opacity:1;
+  transform:translateY(0);
+}
+.site-popup-msg i{
+  color:#facc15;
+}
 @media(max-width:900px){
   header{
     padding:10px 18px;
@@ -243,6 +270,12 @@ main{
   .top-strip{
     padding:6px 14px;
     text-align:center;
+  }
+}
+@media(max-width:600px){
+  .site-popup-msg{
+    font-size:.78rem;
+    padding:8px 10px;
   }
 }
 </style>
@@ -543,6 +576,12 @@ main{
   </div>
 </footer>
 
+<!-- BOTTOM POPUP BAR -->
+<div class="site-popup-msg" id="sitePopupMsg">
+  <i class="fa-solid fa-check-circle"></i>
+  <span>Trusted, experienced and expert plumbers, painters, building contractors, engineers</span>
+</div>
+
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -559,8 +598,56 @@ function initCardSlideshows(){
     }, 2500);
   });
 }
-
 document.addEventListener('DOMContentLoaded', initCardSlideshows);
+
+/* popup loop with pause on hover – same logic as home */
+const popupEl = document.getElementById('sitePopupMsg');
+let popupInterval = null;
+let popupTimeout = null;
+let popupPaused = false;
+
+function showPopupOnce(){
+  if(popupPaused) return;
+  popupEl.classList.add('show');
+  popupTimeout = setTimeout(() => {
+    popupEl.classList.remove('show');
+  }, 1500);
+}
+
+function startPopupLoop(){
+  if(popupInterval) return;
+  // first show after 1s
+  setTimeout(showPopupOnce, 1000);
+  // then every 3s
+  popupInterval = setInterval(showPopupOnce, 3000);
+}
+
+function stopPopupLoop(){
+  if(popupInterval){
+    clearInterval(popupInterval);
+    popupInterval = null;
+  }
+  if(popupTimeout){
+    clearTimeout(popupTimeout);
+    popupTimeout = null;
+  }
+}
+
+// pause on hover
+popupEl.addEventListener('mouseenter', () => {
+  popupPaused = true;
+  popupEl.classList.add('show');
+  stopPopupLoop();
+});
+
+popupEl.addEventListener('mouseleave', () => {
+  popupPaused = false;
+  popupEl.classList.remove('show');
+  startPopupLoop();
+});
+
+// start loop on page load
+startPopupLoop();
 </script>
 
 </body>
